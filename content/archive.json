@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Seoul",
+  "program": {
+    "name": "Voice UX Lab",
+    "start": "2026-10-03",
+    "end": "2026-11-30",
+    "planned_session_time": "19:00–21:00",
+    "meeting_format": "to-confirm"
+  },
+  "weeks": [
+    {
+      "number": 1,
+      "planned_date": "2026-10-07",
+      "title": "Frame the problem",
+      "deliverable": "Project topic, goals, and role table",
+      "activities": [
+        "Introductions and team first orientation",
+        "Voice UX and Realtime fundamentals",
+        "Agree the problem, goals, and initial responsibilities"
+      ],
+      "status": "planned",
+      "records": []
+    },
+    {
+      "number": 2,
+      "planned_date": "2026-10-14",
+      "title": "Design the conversation",
+      "deliverable": "User scenarios and conversation flow",
+      "activities": [
+        "Define the target user and physical task",
+        "Map the conversation journey",
+        "Document edge cases and recovery paths"
+      ],
+      "status": "planned",
+      "records": []
+    },
+    {
+      "number": 3,
+      "planned_date": "2026-10-21",
+      "title": "Build the voice loop",
+      "deliverable": "Working voice conversation prototype",
+      "activities": [
+        "Connect the Realtime API after verifying current documentation",
+        "Implement speech input and output",
+        "Explore turn-taking, interruptions, and event logging"
+      ],
+      "status": "planned",
+      "records": []
+    },
+    {
+      "number": 4,
+      "planned_date": "2026-10-28",
+      "title": "Give the agent tools",
+      "deliverable": "At least one core tool integrated",
+      "activities": [
+        "Choose a tool that serves the core task",
+        "Implement tool calling and permissions",
+        "Handle tool failure and unexpected responses"
+      ],
+      "status": "planned",
+      "records": []
+    },
+    {
+      "number": 5,
+      "planned_date": "2026-11-04",
+      "title": "Test what matters",
+      "deliverable": "Test scenarios and improvement list",
+      "activities": [
+        "Define test scenarios, measures, and success criteria",
+        "Test latency, recognition errors, interruptions, and context retention",
+        "Record observations and prioritize improvements"
+      ],
+      "status": "planned",
+      "records": []
+    },
+    {
+      "number": 6,
+      "planned_date": "2026-11-11",
+      "title": "Bring it together",
+      "deliverable": "Working MVP",
+      "activities": [
+        "Integrate voice UI, agent features, and screen interface",
+        "Verify the end-to-end core user scenario",
+        "Document remaining limitations"
+      ],
+      "status": "planned",
+      "records": []
+    },
+    {
+      "number": 7,
+      "planned_date": "2026-11-18",
+      "title": "Make the work legible",
+      "deliverable": "MVP and presentation draft",
+      "activities": [
+        "Organize the repository and write development documentation",
+        "Prepare presentation and demo materials",
+        "Connect report claims to archived evidence"
+      ],
+      "status": "planned",
+      "records": []
+    },
+    {
+      "number": 8,
+      "planned_date": "2026-11-25",
+      "title": "Share and reflect",
+      "deliverable": "Final code, docs, slides, and demo video",
+      "activities": [
+        "Run the team final results-sharing meeting",
+        "Check the end-to-end demo and collect peer feedback",
+        "Record individual outputs and reflections; rehearse and make final fixes"
+      ],
+      "status": "planned",
+      "records": []
+    }
+  ],
+  "report": [
+    {
+      "id": "overview",
+      "title": "Executive summary",
+      "guidance": "State the problem, target user, final scope, main outcomes, and current limitations.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "problem",
+      "title": "Problem & research questions",
+      "guidance": "Describe the hands-busy scenario, user need, hypotheses, and success criteria.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "demo",
+      "title": "Agent & demo",
+      "guidance": "Link the working demo, source code, demonstration video, and setup instructions. Explain what the agent actually does.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "architecture",
+      "title": "Design & architecture",
+      "guidance": "Explain the voice loop, tool calls, handoffs if used, guardrails, state, and optional visual context. Include decisions and tradeoffs.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "development",
+      "title": "Development & technical insights",
+      "guidance": "Document how API and Codex supported the work, obstacles, solutions, alternatives, and verification.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "evaluation",
+      "title": "Evaluation & improvement",
+      "guidance": "Record protocol, scenarios, participant handling, measured results, baselines, observed failures, and improvements. Separate observations from claims.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "journey",
+      "title": "Learning journey",
+      "guidance": "Synthesize weekly activities and show how the problem, design, and implementation changed over the program.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "contributions",
+      "title": "Individual work & reflections",
+      "guidance": "Include each contributor’s approved name or alias, role, linked output, and reflection. Distinguish meeting attendance from program completion.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "limitations",
+      "title": "Limitations & next steps",
+      "guidance": "Discuss unresolved problems, research limitations, deferred features, and prioritized future work.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    },
+    {
+      "id": "appendix",
+      "title": "Artifacts & references",
+      "guidance": "Collect the final code, README, technical docs, presentation, demo video, approved photos, evidence index, and external references.",
+      "status": "pending",
+      "paragraphs": [],
+      "evidence": []
+    }
+  ]
+}
