@@ -58,7 +58,7 @@ Each English page has a Korean page with the suffix `.ko.html`. The footer menu 
 
 ## English copy
 
-Use ASD-STE100 Issue 9 for English content. Read [the copy guide](docs/english-copy.md). The site checks sentence length and paragraph length. These checks do not replace a vocabulary and meaning review.
+Use ASD-STE100 Issue 9 as the authority for English content. Read [the copy guide](docs/english-copy.md). The author must review meaning, grammar, terminology, and source accuracy. Do not use static scripts to assess STE compliance. The site checker checks website structure and links only.
 
 ## Public Notion sources
 

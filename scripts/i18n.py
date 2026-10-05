@@ -25,8 +25,8 @@ def translate(text):
     if m: return m[1]+' / '+translate(m[2])
     m = re.fullmatch(r'(\d{2}) (.+)', key)
     if m: return m[1]+' '+translate(m[2])
-    m = re.fullmatch(r'(\d+) planned · (\d+) completed', key)
-    if m: return f'예정 {m[1]}회 · 완료 {m[2]}회'
+    m = re.fullmatch(r'(\d+) weeks · (\d+) activity records', key)
+    if m: return f'{m[1]}주 · 활동 기록 {m[2]}건'
     m = re.fullmatch(r'(Oct|Nov) (\d{2}), 2026', key)
     if m: return f'2026년 {10 if m[1]=="Oct" else 11}월 {int(m[2])}일'
     raise ValueError(f'Missing Korean translation: {key}')

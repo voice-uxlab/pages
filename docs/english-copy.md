@@ -1,20 +1,33 @@
 # English copy guide
 
-Reference: [ASD-STE100 Issue 9](https://www.asd-ste100.org/assets/files/ASD-STE100_ISSUE9.pdf), January 15, 2025.
+Authority: [ASD-STE100 Issue 9](https://www.asd-ste100.org/assets/files/ASD-STE100_ISSUE9.pdf), January 15, 2025.
 
-## Writing
+## Author responsibility
 
-Use active voice and simple verb forms. Give one instruction in each sentence. Give one topic in each paragraph. Use the same term for the same item.
+Use the specification itself as the reference. A summary, dictionary substitution, or software result is not sufficient.
 
-Use a maximum of 20 words in a sentence. This site uses that limit for instructions and descriptions. Use a maximum of six sentences in a paragraph.
+Read the source information first. Identify the reader, the purpose of the text, and the action or fact that each sentence must communicate. Then write the sentence with the correct grammar and terminology.
 
-Use approved words with their approved meanings and parts of speech. Use subject terms only as technical nouns or technical verbs. Do not use a technical noun as a verb.
+If a word replacement changes the meaning or makes the sentence awkward, use a different sentence construction. Do not simplify away a necessary condition, responsibility, or distinction between a plan and a result.
 
-The copy review replaced non-approved verbs such as describe, explain, improve, create, and confirm. It also removed metaphors and complex verb forms.
+## Editorial review
+
+Review the English as a technical writer. Check:
+
+- The facts against the project sources.
+- Each word’s meaning and part of speech against the STE dictionary.
+- Technical terms against the relevant subject field and this project’s glossary.
+- Verb forms, sentence construction, pronoun references, and active voice.
+- Instructions for a clear action, object, condition, and responsible person.
+- Descriptions for a clear subject and logical order.
+- Sentence and paragraph structure against the specification, in context.
+- Consistent terminology across the website.
+
+Do not accept a technical noun merely because a word is absent from the dictionary. It must identify a concept in the subject field. Do not use that noun as a verb.
+
+The author decides whether the text communicates the correct meaning and meets the specification. Do not use Python or other static local scripts to assess STE compliance. Do not report word counts as compliance evidence.
 
 ## Subject terms
-
-These terms identify software, research methods, or project records. Use them consistently. Proper product names and document titles keep their official forms.
 
 | Term | Meaning in this project |
 | --- | --- |
@@ -26,22 +39,22 @@ These terms identify software, research methods, or project records. Use them co
 | feedback | Comments from users after a test |
 | guardrail | A control that limits an agent’s actions |
 | handoff | A transfer of a request to another agent |
-| MVP | A minimum viable product with primary functions |
+| MVP | Minimum viable product: the first version with the functions needed for the selected task |
 | prototype | An early implementation used for tests |
 | repository | The GitHub storage location for code and documents |
 | tool call | An agent’s request to a software function |
 | UI | User interface |
 | UX | User experience |
 | voice interface | An interface that uses speech for user requests and agent responses |
-| session | One scheduled team activity or one research task |
-| project report | The document that gives the design, work, and results |
-| final report | The name of the report at program completion |
+| turn | One user or agent contribution to a conversation |
+| session | One team activity or one research task; specify which when the context is not clear |
+| final report | The project report at program completion |
 | draft | A document state before completion and review |
 
-## Verification
+Proper product names and document titles keep their official forms.
 
-The current copy received an editorial review against Issue 9. The dictionary reference remains outside this repository.
+## Website checks
 
-The site check verifies sentence length, paragraph length, links, language codes, and language pairs. It does not prove every word’s meaning or part of speech. Review those properties after each copy change. Do not label an automatic check as full ASD-STE100 certification.
+`scripts/check.py` checks document structure, local links, anchors, assets, language codes, and paired language links. It does not examine English grammar, vocabulary, readability, or STE compliance.
 
-Korean text uses the same facts. ASD-STE100 controls English; it is not a Korean-language standard.
+The author also reviews the Korean text for the same facts and distinctions. ASD-STE100 is an English standard, not a Korean-language standard.

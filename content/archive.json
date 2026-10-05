@@ -18,7 +18,7 @@
       "deliverable": "Notion workspace, GitHub repository, and development environment",
       "activities": [
         "Team orientation and introductions",
-        "Get knowledge about the Realtime API and voice interaction UI",
+        "Read the Realtime API documentation. Do exercises with speech input and output.",
         "Set up Notion, GitHub, and Codex"
       ],
       "status": "planned",
@@ -30,8 +30,8 @@
       "title": "Voice-first UX & agent concepts",
       "deliverable": "Learning notes and initial voice interaction exercises",
       "activities": [
-        "Get knowledge about voice interfaces, tool calls, and prompt design",
-        "Do exercises with the technology for implementation"
+        "Read about voice interfaces, tool calls, and prompt design.",
+        "Use these concepts in voice interaction exercises."
       ],
       "status": "planned",
       "records": []
@@ -55,8 +55,8 @@
       "title": "Voice interaction prototype",
       "deliverable": "Voice interaction UI prototype",
       "activities": [
-        "Do development work together with Codex and GitHub",
-        "Make the voice interaction interface"
+        "Use Codex for development. Keep the code in GitHub.",
+        "Make an interface for speech input and output."
       ],
       "status": "planned",
       "records": []
@@ -67,8 +67,8 @@
       "title": "AI agent & MVP",
       "deliverable": "MVP with primary functions",
       "activities": [
-        "Make the AI agent and tool calls",
-        "Make the primary user scenario"
+        "Make the AI agent. Add the functions that it needs to call tools.",
+        "Write code for the tasks in the primary user scenario."
       ],
       "status": "planned",
       "records": []
@@ -80,7 +80,7 @@
       "deliverable": "Test findings, improvement list, and revised MVP",
       "activities": [
         "Do user tests and collect feedback",
-        "Make performance and conversation flow better"
+        "Use the test results to decrease errors and response time."
       ],
       "status": "planned",
       "records": []
@@ -91,7 +91,7 @@
       "title": "Voice UX improvements",
       "deliverable": "MVP improvements and optional multimodal demo",
       "activities": [
-        "Make the voice interface better",
+        "Use the test results to change the voice interface.",
         "Add camera, display, or hardware support only if needed"
       ],
       "status": "planned",
@@ -105,7 +105,7 @@
       "activities": [
         "Prepare the repository and technical documents",
         "Make presentation materials and a demo",
-        "Hold the last meeting and do a presentation exercise"
+        "Hold the results meeting. Do a presentation rehearsal."
       ],
       "status": "planned",
       "records": []
@@ -115,7 +115,7 @@
     {
       "id": "overview",
       "title": "Executive summary",
-      "guidance": "Give the problem, user, project limits, primary results, and limitations.",
+      "guidance": "State the user problem and the project scope. Give the primary results and limitations.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -126,8 +126,8 @@
       "guidance": "Give the task, user needs, research questions, and success criteria.",
       "status": "draft",
       "paragraphs": [
-        "The agent must receive speech in real time and identify user requests. It must keep context and use tools during the conversation.",
-        "The team will examine how voice can help people and agents do work together. The team will select the user problem in week 3."
+        "The agent must identify the user’s task from speech. It must keep information from earlier turns in the conversation. It must use tools when the task needs them.",
+        "The team will examine voice as an interface between a user and an agent. In week 3, the team will select the user problem."
       ],
       "evidence": [
         {
@@ -139,7 +139,7 @@
     {
       "id": "demo",
       "title": "Agent & demo",
-      "guidance": "Add links to the demo, source code, video, and setup instructions. Give the agent’s functions.",
+      "guidance": "Add links to the demo, source code, video, and setup instructions. List the tasks that the agent can do.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -147,7 +147,7 @@
     {
       "id": "architecture",
       "title": "Design & architecture",
-      "guidance": "Give information about the voice interface, tool calls, handoffs, guardrails, and system state. Give the reasons for design decisions.",
+      "guidance": "Show the system design and the voice interface. Include tool calls, handoffs, and guardrails only if the project uses them. Give the reasons for design decisions.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -155,7 +155,7 @@
     {
       "id": "development",
       "title": "Development & technical insights",
-      "guidance": "Give information about the use of the API and Codex. Give the problems, solutions, alternatives, and checks.",
+      "guidance": "State which development tasks used the API and Codex. Give each technical problem, its solution, and the checks of that solution.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -174,8 +174,9 @@
       "guidance": "Give each week’s work and the changes to the problem, design, and implementation.",
       "status": "draft",
       "paragraphs": [
-        "The eight-week plan has technology and team setup first. It then has project planning, development, tests, improvements, and the presentation.",
-        "These activities are plans. No completed activity records are available."
+        "The first two weeks cover the development tools and voice interface concepts. In week 3, the team will select the project.",
+        "In weeks 4 and 5, the team will make the prototype and agent. In weeks 6 and 7, it will do user tests and change the interface. In week 8, it will prepare the final presentation.",
+        "These activities are plans. This archive has no records of completed activities."
       ],
       "evidence": [
         {
@@ -195,7 +196,7 @@
     {
       "id": "limitations",
       "title": "Limitations & next steps",
-      "guidance": "Give problems, test limitations, remaining features, and plans for subsequent work.",
+      "guidance": "List the problems that remain and the limits of the tests. State which functions need more work.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []

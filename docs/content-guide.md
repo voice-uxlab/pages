@@ -52,3 +52,7 @@ Public publication does not satisfy any official Notion or email submission requ
 Add Korean text to `content/ko.json` when you add or change English text. The build stops for missing translations. The technical language code for Korean is `ko`; the menu label is KR.
 
 Use the [English copy guide](english-copy.md) for public English text. Keep the English and Korean facts the same. Use the [source record](sources.md) when you change the schedule or curriculum.
+
+## Editorial responsibility
+
+Read each English passage against the source and ASD-STE100 specification. Review meaning, syntax, terminology, and the reader’s task. Do not use static language checkers or word counts to claim STE compliance. Website link and structure checks are separate from this editorial review.
