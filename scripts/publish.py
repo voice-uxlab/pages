@@ -16,6 +16,9 @@ run(sys.executable, 'scripts/check.py')
 with tempfile.TemporaryDirectory(prefix='voice-uxlab-publish-') as directory:
     checkout = Path(directory) / 'site'
     run('git', 'clone', '--single-branch', '--branch', 'gh-pages', REMOTE, str(checkout))
+    for key in ['user.name', 'user.email']:
+        value = subprocess.check_output(['git', 'config', key], cwd=ROOT, text=True).strip()
+        run('git', 'config', key, value, cwd=checkout)
     for item in checkout.iterdir():
         if item.name == '.git': continue
         if item.is_dir(): shutil.rmtree(item)

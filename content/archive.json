@@ -5,110 +5,107 @@
     "name": "Voice UX Lab",
     "start": "2026-10-03",
     "end": "2026-11-30",
-    "planned_session_time": "19:00–21:00",
-    "meeting_format": "to-confirm"
+    "planned_session_time": "14:00–17:00",
+    "meeting_format": "In person near Yangjae Citizen’s Forest Station; Google Meet online",
+    "source_url": "https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34",
+    "source_reviewed": "2026-10-05"
   },
   "weeks": [
     {
       "number": 1,
-      "planned_date": "2026-10-07",
-      "title": "Frame the problem",
-      "deliverable": "Project topic, goals, and role table",
+      "planned_date": null,
+      "title": "Technology & team setup",
+      "deliverable": "Notion workspace, GitHub repository, and development environment",
       "activities": [
-        "Introductions and team first orientation",
-        "Voice UX and Realtime fundamentals",
-        "Agree the problem, goals, and initial responsibilities"
+        "Team orientation and introductions",
+        "Get knowledge about the Realtime API and voice interaction UI",
+        "Set up Notion, GitHub, and Codex"
       ],
       "status": "planned",
       "records": []
     },
     {
       "number": 2,
-      "planned_date": "2026-10-14",
-      "title": "Design the conversation",
-      "deliverable": "User scenarios and conversation flow",
+      "planned_date": null,
+      "title": "Voice-first UX & agent concepts",
+      "deliverable": "Learning notes and initial voice interaction exercises",
       "activities": [
-        "Define the target user and physical task",
-        "Map the conversation journey",
-        "Document edge cases and recovery paths"
+        "Get knowledge about voice interfaces, tool calls, and prompt design",
+        "Do exercises with the technology for implementation"
       ],
       "status": "planned",
       "records": []
     },
     {
       "number": 3,
-      "planned_date": "2026-10-21",
-      "title": "Build the voice loop",
-      "deliverable": "Working voice conversation prototype",
+      "planned_date": null,
+      "title": "Project planning",
+      "deliverable": "Project brief, user journey, interaction flow, architecture, and roles",
       "activities": [
-        "Connect the Realtime API after verifying current documentation",
-        "Implement speech input and output",
-        "Explore turn-taking, interruptions, and event logging"
+        "Select the user problem and project topic",
+        "Design the user journey and voice interaction flow",
+        "Select the architecture, roles, and development plan"
       ],
       "status": "planned",
       "records": []
     },
     {
       "number": 4,
-      "planned_date": "2026-10-28",
-      "title": "Give the agent tools",
-      "deliverable": "At least one core tool integrated",
+      "planned_date": null,
+      "title": "Voice interaction prototype",
+      "deliverable": "Voice interaction UI prototype",
       "activities": [
-        "Choose a tool that serves the core task",
-        "Implement tool calling and permissions",
-        "Handle tool failure and unexpected responses"
+        "Do development work together with Codex and GitHub",
+        "Make the voice interaction interface"
       ],
       "status": "planned",
       "records": []
     },
     {
       "number": 5,
-      "planned_date": "2026-11-04",
-      "title": "Test what matters",
-      "deliverable": "Test scenarios and improvement list",
+      "planned_date": null,
+      "title": "AI agent & MVP",
+      "deliverable": "MVP with primary functions",
       "activities": [
-        "Define test scenarios, measures, and success criteria",
-        "Test latency, recognition errors, interruptions, and context retention",
-        "Record observations and prioritize improvements"
+        "Make the AI agent and tool calls",
+        "Make the primary user scenario"
       ],
       "status": "planned",
       "records": []
     },
     {
       "number": 6,
-      "planned_date": "2026-11-11",
-      "title": "Bring it together",
-      "deliverable": "Working MVP",
+      "planned_date": null,
+      "title": "User testing & improvement",
+      "deliverable": "Test findings, improvement list, and revised MVP",
       "activities": [
-        "Integrate voice UI, agent features, and screen interface",
-        "Verify the end-to-end core user scenario",
-        "Document remaining limitations"
+        "Do user tests and collect feedback",
+        "Make performance and conversation flow better"
       ],
       "status": "planned",
       "records": []
     },
     {
       "number": 7,
-      "planned_date": "2026-11-18",
-      "title": "Make the work legible",
-      "deliverable": "MVP and presentation draft",
+      "planned_date": null,
+      "title": "Voice UX improvements",
+      "deliverable": "MVP improvements and optional multimodal demo",
       "activities": [
-        "Organize the repository and write development documentation",
-        "Prepare presentation and demo materials",
-        "Connect report claims to archived evidence"
+        "Make the voice interface better",
+        "Add camera, display, or hardware support only if needed"
       ],
       "status": "planned",
       "records": []
     },
     {
       "number": 8,
-      "planned_date": "2026-11-25",
-      "title": "Share and reflect",
-      "deliverable": "Final code, docs, slides, and demo video",
+      "planned_date": null,
+      "title": "Share results & prepare the demo",
+      "deliverable": "Final code, technical docs, presentation, and demo",
       "activities": [
-        "Run the team final results-sharing meeting",
-        "Check the end-to-end demo and collect peer feedback",
-        "Record individual outputs and reflections; rehearse and make final fixes"
+        "Prepare the repository and technical documents",
+        "Make presentation materials and a demo",
+        "Hold the last meeting and do a presentation exercise"
       ],
       "status": "planned",
       "records": []
@@ -118,7 +115,7 @@
     {
       "id": "overview",
       "title": "Executive summary",
-      "guidance": "State the problem, target user, final scope, main outcomes, and current limitations.",
+      "guidance": "Give the problem, user, project limits, primary results, and limitations.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -126,15 +123,23 @@
     {
       "id": "problem",
       "title": "Problem & research questions",
-      "guidance": "Describe the hands-busy scenario, user need, hypotheses, and success criteria.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "guidance": "Give the task, user needs, research questions, and success criteria.",
+      "status": "draft",
+      "paragraphs": [
+        "The agent must receive speech in real time and identify user requests. It must keep context and use tools during the conversation.",
+        "The team will examine how voice can help people and agents do work together. The team will select the user problem in week 3."
+      ],
+      "evidence": [
+        {
+          "label": "Published Voice UX Lab study brief",
+          "url": "https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34"
+        }
+      ]
     },
     {
       "id": "demo",
       "title": "Agent & demo",
-      "guidance": "Link the working demo, source code, demonstration video, and setup instructions. Explain what the agent actually does.",
+      "guidance": "Add links to the demo, source code, video, and setup instructions. Give the agent’s functions.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -142,7 +147,7 @@
     {
       "id": "architecture",
       "title": "Design & architecture",
-      "guidance": "Explain the voice loop, tool calls, handoffs if used, guardrails, state, and optional visual context. Include decisions and tradeoffs.",
+      "guidance": "Give information about the voice interface, tool calls, handoffs, guardrails, and system state. Give the reasons for design decisions.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -150,7 +155,7 @@
     {
       "id": "development",
       "title": "Development & technical insights",
-      "guidance": "Document how API and Codex supported the work, obstacles, solutions, alternatives, and verification.",
+      "guidance": "Give information about the use of the API and Codex. Give the problems, solutions, alternatives, and checks.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -158,23 +163,31 @@
     {
       "id": "evaluation",
       "title": "Evaluation & improvement",
-      "guidance": "Record protocol, scenarios, participant handling, measured results, baselines, observed failures, and improvements. Separate observations from claims.",
+      "guidance": "Give the test method, scenarios, measures, results, failures, and improvements. Keep observations separate from conclusions.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
     },
     {
       "id": "journey",
-      "title": "Learning journey",
-      "guidance": "Synthesize weekly activities and show how the problem, design, and implementation changed over the program.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "title": "Study records",
+      "guidance": "Give each week’s work and the changes to the problem, design, and implementation.",
+      "status": "draft",
+      "paragraphs": [
+        "The eight-week plan has technology and team setup first. It then has project planning, development, tests, improvements, and the presentation.",
+        "These activities are plans. No completed activity records are available."
+      ],
+      "evidence": [
+        {
+          "label": "Published Voice UX Lab study brief",
+          "url": "https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34"
+        }
+      ]
     },
     {
       "id": "contributions",
       "title": "Individual work & reflections",
-      "guidance": "Include each contributor’s approved name or alias, role, linked output, and reflection. Distinguish meeting attendance from program completion.",
+      "guidance": "Add each member’s approved name, role, work links, and comments. Keep meeting attendance separate from program completion.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -182,7 +195,7 @@
     {
       "id": "limitations",
       "title": "Limitations & next steps",
-      "guidance": "Discuss unresolved problems, research limitations, deferred features, and prioritized future work.",
+      "guidance": "Give problems, test limitations, remaining features, and plans for subsequent work.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []
@@ -190,7 +203,7 @@
     {
       "id": "appendix",
       "title": "Artifacts & references",
-      "guidance": "Collect the final code, README, technical docs, presentation, demo video, approved photos, evidence index, and external references.",
+      "guidance": "Add the code, documents, presentation, demo video, approved photos, evidence index, and source links.",
       "status": "pending",
       "paragraphs": [],
       "evidence": []

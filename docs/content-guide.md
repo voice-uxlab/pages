@@ -2,7 +2,7 @@
 
 ## Week
 
-`number`, `planned_date` (ISO date), `title`, `deliverable`, `activities`, `status` (`planned`, `in-progress`, `completed`), and `records`.
+`number`, `planned_date` (ISO date, or null when the source gives no date), `title`, `deliverable`, `activities`, `status` (`planned`, `in-progress`, `completed`), and `records`.
 
 The plan and the actual activity records are separate. Set a week to completed only when its documented activity has occurred. Dates use Asia/Seoul; a changed meeting date belongs in the record and need not overwrite historical planning.
 
@@ -46,3 +46,9 @@ For final results-sharing, gather approved outputs and reflections for every con
 6. Confirm the deployment succeeds and verify the live page.
 
 Public publication does not satisfy any official Notion or email submission requirement.
+
+## English and Korean
+
+Add Korean text to `content/ko.json` when you add or change English text. The build stops for missing translations. The technical language code for Korean is `ko`; the menu label is KR.
+
+Use the [English copy guide](english-copy.md) for public English text. Keep the English and Korean facts the same. Use the [source record](sources.md) when you change the schedule or curriculum.
