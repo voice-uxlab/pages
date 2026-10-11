@@ -21,8 +21,50 @@
         "Read the Realtime API documentation. Do exercises with speech input and output.",
         "Set up Notion, GitHub, and Codex"
       ],
-      "status": "planned",
-      "records": []
+      "status": "in-progress",
+      "records": [
+        {
+          "id": "first-regular-meetup",
+          "title": "First regular meetup",
+          "date": "2026-10-11",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "In-person team meeting",
+          "summary": "The team shared expectations, goals, strengths, and weaknesses. Members discussed project quality and possible voice services. The project topic remains open.",
+          "agenda": [
+            "Introductions and questions prepared by the leader",
+            "Project goals and quality expectations",
+            "Discussion of feasibility, user needs, and expected effects",
+            "Vehicle agent: voice navigation, warning light explanations, and service bookings",
+            "Personal tutor with voice and vision",
+            "Voice notes during manual work, with organized work records",
+            "Childcare assistant that learns from baby cries",
+            "Voice control for apps with visual menus",
+            "Conversational kiosk",
+            "Exercise assistant: running coaching, gym support, and hiking guidance and alerts",
+            "Voice home assistant for people who live alone, including older adults",
+            "Shopping agent: ingredient planning, quantities, discounts, and store routes",
+            "Real-time assistance for people with visual impairments, using voice and vision"
+          ],
+          "contributions": [],
+          "decisions": [
+            "Build a useful service with a complete user scenario and quality suitable for a portfolio. An MVP alone is not the final goal.",
+            "Shared GitHub and OpenAI Organization account information for collaboration.",
+            "Do not use the program facilitator assistant.",
+            "Use approximately KRW 400,000 of the leader facilitator allowance for voice API costs. Members expressed willingness to contribute some personal funds if needed. Costs remain uncertain, and excessive personal costs could be difficult. Ask for news of support programs."
+          ],
+          "next_steps": [
+            "Set criteria to compare ideas and select the project topic.",
+            "Define the users, use situations, and problem to solve.",
+            "Set a cost limit based on expected API use."
+          ],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true
+        }
+      ]
     },
     {
       "number": 2,
@@ -176,12 +218,16 @@
       "paragraphs": [
         "The first two weeks cover the development tools and voice interface concepts. In week 3, the team will select the project.",
         "In weeks 4 and 5, the team will make the prototype and agent. In weeks 6 and 7, it will do user tests and change the interface. In week 8, it will prepare the final presentation.",
-        "These activities are plans. This archive has no records of completed activities."
+        "The first regular meetup covered introductions, quality goals, and possible voice services. The project topic remains open. The other activities are plans."
       ],
       "evidence": [
         {
           "label": "Published Voice UX Lab study brief",
           "url": "https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34"
+        },
+        {
+          "label": "First regular meetup record",
+          "url": "week-01.html"
         }
       ]
     },

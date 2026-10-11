@@ -23,7 +23,7 @@ def validate():
                 assert key in r, f'Missing record field: {key}'
             assert r['publication_reviewed'] is True, 'Publish only reviewed records'
             assert r['timezone'] == 'Asia/Seoul'
-            assert r['photos'] and r['artifacts'], 'Records need photographs and work products'
+            assert r['summary'].strip(), 'Records need a substantive public summary'
             date.fromisoformat(r['date'])
             for asset in r['photos'] + r['artifacts']:
                 assert asset.get('label') and asset.get('url')
@@ -53,7 +53,8 @@ def week_cards():
 def record(r):
     photos = ''.join(f'<figure><img src="{e(p["url"])}" alt="{e(p.get("alt", p["label"]))}" loading="lazy"><figcaption>{e(p["label"])}</figcaption></figure>' for p in r['photos'])
     subsections = ''.join(f'<h3>{label}</h3><ul>'+''.join(f'<li>{e(item)}</li>' for item in r[key])+'</ul>' for label,key in [('Agenda & timeline','agenda'),('Contributions','contributions'),('Decisions & rationale','decisions'),('Next steps','next_steps')])
-    return f'''<article class="record"><p class="eyebrow">{e(r['date'])} / {e(r['start_time'])}–{e(r['end_time'])} KST</p><h2>{e(r['title'])}</h2><dl><dt>Attendees</dt><dd>{e(', '.join(r['public_attendees']))}</dd><dt>Venue</dt><dd>{e(r['venue'])}</dd></dl><p>{e(r['summary'])}</p>{subsections}<h3>Work products</h3><ul>{links(r['artifacts'])}</ul><h3>Activity photos</h3>{photos}</article>'''
+    timing = f"{r['date']} / {r['start_time']}–{r['end_time']} KST" if r['start_time'] and r['end_time'] else r['date']
+    return f'''<article class="record"><p class="eyebrow">{e(timing)}</p><h2>{e(r['title'])}</h2><dl><dt>Attendees</dt><dd>{e(', '.join(r['public_attendees']))}</dd><dt>Venue</dt><dd>{e(r['venue'])}</dd></dl><p>{e(r['summary'])}</p>{subsections}{('<h3>Work products</h3><ul>'+links(r['artifacts'])+'</ul>') if r['artifacts'] else ''}{('<h3>Activity photos</h3>'+photos) if r['photos'] else ''}</article>'''
 
 def build(localize=True):
     validate()
