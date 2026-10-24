@@ -1,0 +1,23 @@
+name: Publish archive
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build, check, and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          gh auth setup-git
+          python scripts/publish.py
+          gh api --method POST repos/voice-uxlab/pages/pages/builds
