@@ -91,7 +91,9 @@ def build(localize=True):
     for w in DATA['weeks']:
         items = ''.join(f'<li>{e(item)}</li>' for item in w['activities'])
         body = intro(f'Week {w["number"]:02} / {('Plan' if w['status']=='planned' else w['status'].replace('-', ' '))}',w['title'],w['deliverable'])
-        body += f'<div class="facts"><div><span>Session date</span><strong>{e(w["planned_date"] or 'Date not available')}</strong></div><div><span>Session time</span><strong>14:00–17:00 KST</strong></div><div><span>Meeting format</span><strong>In person / Google Meet</strong></div></div><section class="reading"><h2>Session plan</h2><ul>{items}</ul><h2>Activity records</h2>'
+        body += f'<div class="facts"><div><span>Session date</span><strong>{e(w["planned_date"] or 'Date not available')}</strong></div><div><span>Session time</span><strong>14:00–{'18:00' if w["number"] <= 2 else '17:00'} KST</strong></div><div><span>Meeting format</span><strong>In person</strong></div></div><section class="weekly-records">'
+        if w['status'] != 'completed': body += f'<h2>Session plan</h2><ul>{items}</ul>'
+        body += '<h2>Activity records</h2>'
         body += ''.join(record(r) for r in w['records']) if w['records'] else '<div class="empty"><h3>No activity record</h3><p>This page contains the session plan. It does not give activity results. The team will add results after review.</p></div>'
         body += '</section><div class="pagination">'
         if w['number'] > 1: body += f'<a href="week-{w["number"]-1:02}.html">Previous week</a>'
