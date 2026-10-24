@@ -68,15 +68,160 @@
     },
     {
       "number": 2,
-      "planned_date": null,
+      "planned_date": "2026-10-18",
       "title": "Voice-first UX & agent concepts",
       "deliverable": "Learning notes and initial voice interaction exercises",
       "activities": [
         "Read about voice interfaces, tool calls, and prompt design.",
         "Use these concepts in voice interaction exercises."
       ],
-      "status": "planned",
-      "records": []
+      "status": "in-progress",
+      "records": [
+        {
+          "id": "second-regular-meetup",
+          "title": "Second regular meetup: project selection",
+          "date": "2026-10-18",
+          "start_time": "14:00",
+          "end_time": "17:00",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "In-person team meeting",
+          "summary": "The team selected MIND DETOXING. An overtime discussion explored voice-based thought dumping, everyday reflection, and personal patterns. Product scope, roles, and milestones remain open.",
+          "agenda": [
+            "Review project proposals and vote on the team project.",
+            "Explore a lighter reflection service after the meetup."
+          ],
+          "contributions": [],
+          "decisions": [
+            "MIND DETOXING is the selected team project."
+          ],
+          "next_steps": [
+            "Define users, scope, roles, and milestones in a separate discussion."
+          ],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "sections": [
+            {
+              "title": "Project selection",
+              "paragraphs": [
+                "The team reviewed 14 project proposals and selected MIND DETOXING through a vote.",
+                "The closing announcement recorded 5 votes for MIND DETOXING, 2 for the conversational wake-up app, 1 for the running coach, and 1 for Docent. These are the recorded results, not current reaction counts.",
+                "The original concept combines voice conversations at night with reflection reports during the day. It proposes empathetic listening, CBT-informed questions, conversation memory, and daily or weekly summaries."
+              ],
+              "items": []
+            },
+            {
+              "title": "Other project ideas",
+              "paragraphs": [
+                "The following pros and cons are retrospective assessments added to this report. They are not confirmed statements from the meeting or reasons for individual votes."
+              ],
+              "items": []
+            },
+            {
+              "title": "Docent: multilingual exhibition guide",
+              "paragraphs": [],
+              "items": [
+                "Pro 1: A clear setting for follow-up questions and multilingual conversation.",
+                "Pro 2: Official exhibition materials can ground answers.",
+                "Pro 3: A pilot can start with one exhibit and one tablet.",
+                "Con 1: Realistic testing needs an exhibition partner.",
+                "Con 2: Noise and reluctance to speak in public may limit use.",
+                "Con 3: Content updates and answer checks require ongoing work."
+              ]
+            },
+            {
+              "title": "VoiceQuest: multiplayer voice mystery game",
+              "paragraphs": [],
+              "items": [
+                "Pro 1: Team members can test the game together.",
+                "Pro 2: The game tests turn-taking, interruptions, and shared context.",
+                "Pro 3: One short mystery gives the prototype a clear scope.",
+                "Con 1: Enjoyment depends heavily on story quality.",
+                "Con 2: Simultaneous speakers make interaction difficult.",
+                "Con 3: Spoilers or inconsistent clues can break the game."
+              ]
+            },
+            {
+              "title": "VoiceFit: voice-controlled workout assistant",
+              "paragraphs": [],
+              "items": [
+                "Pro 1: Hands-free control addresses a concrete inconvenience.",
+                "Pro 2: Timers, pauses, and corrections give measurable tasks.",
+                "Pro 3: User-defined routines reduce the need for specialist content.",
+                "Con 1: Existing timers may already meet user needs.",
+                "Con 2: Breathing and background noise can reduce recognition quality.",
+                "Con 3: Incorrect timing or commands can disrupt exercise."
+              ]
+            },
+            {
+              "title": "Reservation assistant: AI phone bookings",
+              "paragraphs": [],
+              "items": [
+                "Pro 1: The service completes a concrete task.",
+                "Pro 2: It can reach businesses without online booking.",
+                "Pro 3: It tests conversation, negotiation, and delegated actions.",
+                "Con 1: Phone integration adds cost and complexity.",
+                "Con 2: Staff may decline or struggle with AI calls.",
+                "Con 3: Ambiguous answers can cause incorrect booking confirmations."
+              ]
+            },
+            {
+              "title": "Voice body double: help with task completion",
+              "paragraphs": [],
+              "items": [
+                "Pro 1: The service addresses difficulty starting and finishing tasks.",
+                "Pro 2: It tests proactive check-ins and persistent task state.",
+                "Pro 3: Completion and repeat use give concrete evaluation measures.",
+                "Con 1: Check-ins may feel intrusive or like nagging.",
+                "Con 2: Scheduling and reconnection add complexity.",
+                "Con 3: Use may decline after the initial novelty fades."
+              ]
+            },
+            {
+              "title": "FamilySync: shared family scheduling",
+              "paragraphs": [],
+              "items": [
+                "Pro 1: The service addresses recurring coordination needs.",
+                "Pro 2: It tests multi-user context and consent.",
+                "Pro 3: A three-person scenario gives a focused prototype.",
+                "Con 1: Adoption needs participation from several family members.",
+                "Con 2: Speaker identification and calendar access add complexity.",
+                "Con 3: Permission or schedule errors can undermine trust."
+              ]
+            },
+            {
+              "title": "Overtime discussion: everyday reflection",
+              "paragraphs": [
+                "After the meetup, a few members explored a lighter role than specialized mental healthcare. These ideas did not finalize the product scope.",
+                "A hands-free brain dump could let users speak freely instead of typing, then review an organized account of their day.",
+                "Distance from their thoughts may help users view situations more objectively and notice recurring triggers or patterns. A personal checklist was suggested.",
+                "Users need private time and a space where they can speak comfortably. Some users value writing by hand, so the team must examine when speech is useful.",
+                "People may share worries with a trusted listener who helps them notice assumptions, biases, mistaken judgments, or leaps in reasoning. A diary or spoken account can still be selective or incomplete."
+              ],
+              "items": []
+            },
+            {
+              "title": "Open questions and follow-up",
+              "paragraphs": [],
+              "items": [
+                "Will use occur mainly during difficult moments, or become a daily habit?",
+                "Which output helps reflection: a summary, questions, a pattern checklist, or something else?",
+                "How should the service balance listening, questions, and alternative interpretations?",
+                "A simple shareable output was mentioned, but its form remains undefined.",
+                "Define the initial users, minimum complete experience, service boundaries, roles, and milestones."
+              ]
+            },
+            {
+              "title": "Record basis",
+              "paragraphs": [
+                "Project proposals and the vote result come from the project-selection issue. Overtime notes were supplied by a participant. This report does not reproduce member names, handles, profile links, or individual voting rationales."
+              ],
+              "items": []
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 3,
@@ -169,12 +314,16 @@
       "status": "draft",
       "paragraphs": [
         "The agent must identify the user’s task from speech. It must keep information from earlier turns in the conversation. It must use tools when the task needs them.",
-        "The team will examine voice as an interface between a user and an agent. In week 3, the team will select the user problem."
+        "At the second meetup, the team selected MIND DETOXING. The initial users and minimum complete experience still need definition."
       ],
       "evidence": [
         {
           "label": "Published Voice UX Lab study brief",
           "url": "https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34"
+        },
+        {
+          "label": "Second regular meetup record",
+          "url": "week-02.html"
         }
       ]
     },
@@ -216,9 +365,9 @@
       "guidance": "Give each week’s work and the changes to the problem, design, and implementation.",
       "status": "draft",
       "paragraphs": [
-        "The first two weeks cover the development tools and voice interface concepts. In week 3, the team will select the project.",
+        "The curriculum is a plan. Actual meeting records document the team decisions and progress.",
         "In weeks 4 and 5, the team will make the prototype and agent. In weeks 6 and 7, it will do user tests and change the interface. In week 8, it will prepare the final presentation.",
-        "The first regular meetup covered introductions, quality goals, and possible voice services. The project topic remains open. The other activities are plans."
+        "The first meetup explored possible voice services. The second meetup selected MIND DETOXING and explored a lighter reflection service. The other activities remain plans."
       ],
       "evidence": [
         {
@@ -228,6 +377,10 @@
         {
           "label": "First regular meetup record",
           "url": "week-01.html"
+        },
+        {
+          "label": "Second regular meetup record",
+          "url": "week-02.html"
         }
       ]
     },
@@ -257,3 +410,4 @@
     }
   ]
 }
+
