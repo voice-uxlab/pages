@@ -13,7 +13,7 @@
   "weeks": [
     {
       "number": 1,
-      "planned_date": null,
+      "planned_date": "2026-10-11",
       "title": "Technology & team setup",
       "deliverable": "Notion workspace, GitHub repository, and development environment",
       "activities": [
@@ -21,14 +21,14 @@
         "Read the Realtime API documentation. Do exercises with speech input and output.",
         "Set up Notion, GitHub, and Codex"
       ],
-      "status": "in-progress",
+      "status": "completed",
       "records": [
         {
           "id": "first-regular-meetup",
           "title": "First regular meetup",
           "date": "2026-10-11",
-          "start_time": "",
-          "end_time": "",
+          "start_time": "14:00",
+          "end_time": "18:00",
           "timezone": "Asia/Seoul",
           "public_attendees": [],
           "venue": "In-person team meeting",
@@ -75,14 +75,14 @@
         "Read about voice interfaces, tool calls, and prompt design.",
         "Use these concepts in voice interaction exercises."
       ],
-      "status": "in-progress",
+      "status": "completed",
       "records": [
         {
           "id": "second-regular-meetup",
           "title": "Second regular meetup: project selection",
           "date": "2026-10-18",
           "start_time": "14:00",
-          "end_time": "17:00",
+          "end_time": "18:00",
           "timezone": "Asia/Seoul",
           "public_attendees": [],
           "venue": "In-person team meeting",
@@ -525,4 +525,3 @@
     }
   ]
 }
-
