@@ -106,110 +106,224 @@
               "title": "Project selection",
               "paragraphs": [
                 "The team reviewed 14 project proposals and selected MIND DETOXING through a vote.",
-                "The closing announcement recorded 5 votes for MIND DETOXING, 2 for the conversational wake-up app, 1 for the running coach, and 1 for Docent. These are the recorded results, not current reaction counts.",
-                "The original concept combines voice conversations at night with reflection reports during the day. It proposes empathetic listening, CBT-informed questions, conversation memory, and daily or weekly summaries."
+                "The table uses the closing announcement. Current reaction counts can differ."
               ],
-              "items": []
+              "items": [],
+              "tables": [
+                {
+                  "label": "Recorded vote results",
+                  "headers": [
+                    "Project idea",
+                    "Recorded votes",
+                    "Outcome or purpose"
+                  ],
+                  "rows": [
+                    [
+                      "MIND DETOXING",
+                      "5 votes",
+                      "Selected"
+                    ],
+                    [
+                      "Conversational wake-up app",
+                      "2 votes",
+                      "Wake-up calls"
+                    ],
+                    [
+                      "Running coach",
+                      "1 vote",
+                      "Running support"
+                    ],
+                    [
+                      "Docent",
+                      "1 vote",
+                      "Exhibition guide"
+                    ]
+                  ]
+                }
+              ],
+              "after": [
+                {
+                  "title": "Original concept",
+                  "paragraphs": [
+                    "Voice conversations at night connect to reflection reports during the day."
+                  ],
+                  "items": [
+                    "Empathetic listening and conversation.",
+                    "Questions informed by cognitive behavioral therapy (CBT).",
+                    "Conversation memory and daily or weekly summaries."
+                  ]
+                }
+              ]
             },
             {
               "title": "Other project ideas",
               "paragraphs": [
                 "The following pros and cons are retrospective assessments added to this report. They are not confirmed statements from the meeting or reasons for individual votes."
               ],
-              "items": []
-            },
-            {
-              "title": "Docent: multilingual exhibition guide",
-              "paragraphs": [],
-              "items": [
-                "Pro 1: A clear setting for follow-up questions and multilingual conversation.",
-                "Pro 2: Official exhibition materials can ground answers.",
-                "Pro 3: A pilot can start with one exhibit and one tablet.",
-                "Con 1: Realistic testing needs an exhibition partner.",
-                "Con 2: Noise and reluctance to speak in public may limit use.",
-                "Con 3: Content updates and answer checks require ongoing work."
-              ]
-            },
-            {
-              "title": "VoiceQuest: multiplayer voice mystery game",
-              "paragraphs": [],
-              "items": [
-                "Pro 1: Team members can test the game together.",
-                "Pro 2: The game tests turn-taking, interruptions, and shared context.",
-                "Pro 3: One short mystery gives the prototype a clear scope.",
-                "Con 1: Enjoyment depends heavily on story quality.",
-                "Con 2: Simultaneous speakers make interaction difficult.",
-                "Con 3: Spoilers or inconsistent clues can break the game."
-              ]
-            },
-            {
-              "title": "VoiceFit: voice-controlled workout assistant",
-              "paragraphs": [],
-              "items": [
-                "Pro 1: Hands-free control addresses a concrete inconvenience.",
-                "Pro 2: Timers, pauses, and corrections give measurable tasks.",
-                "Pro 3: User-defined routines reduce the need for specialist content.",
-                "Con 1: Existing timers may already meet user needs.",
-                "Con 2: Breathing and background noise can reduce recognition quality.",
-                "Con 3: Incorrect timing or commands can disrupt exercise."
-              ]
-            },
-            {
-              "title": "Reservation assistant: AI phone bookings",
-              "paragraphs": [],
-              "items": [
-                "Pro 1: The service completes a concrete task.",
-                "Pro 2: It can reach businesses without online booking.",
-                "Pro 3: It tests conversation, negotiation, and delegated actions.",
-                "Con 1: Phone integration adds cost and complexity.",
-                "Con 2: Staff may decline or struggle with AI calls.",
-                "Con 3: Ambiguous answers can cause incorrect booking confirmations."
-              ]
-            },
-            {
-              "title": "Voice body double: help with task completion",
-              "paragraphs": [],
-              "items": [
-                "Pro 1: The service addresses difficulty starting and finishing tasks.",
-                "Pro 2: It tests proactive check-ins and persistent task state.",
-                "Pro 3: Completion and repeat use give concrete evaluation measures.",
-                "Con 1: Check-ins may feel intrusive or like nagging.",
-                "Con 2: Scheduling and reconnection add complexity.",
-                "Con 3: Use may decline after the initial novelty fades."
-              ]
-            },
-            {
-              "title": "FamilySync: shared family scheduling",
-              "paragraphs": [],
-              "items": [
-                "Pro 1: The service addresses recurring coordination needs.",
-                "Pro 2: It tests multi-user context and consent.",
-                "Pro 3: A three-person scenario gives a focused prototype.",
-                "Con 1: Adoption needs participation from several family members.",
-                "Con 2: Speaker identification and calendar access add complexity.",
-                "Con 3: Permission or schedule errors can undermine trust."
+              "items": [],
+              "tables": [
+                {
+                  "label": "Project idea comparison",
+                  "headers": [
+                    "Idea",
+                    "Three pros",
+                    "Three cons"
+                  ],
+                  "rows": [
+                    [
+                      "Docent: multilingual exhibition guide",
+                      [
+                        "A clear setting for follow-up questions and multilingual conversation.",
+                        "Official exhibition materials can ground answers.",
+                        "A pilot can start with one exhibit and one tablet."
+                      ],
+                      [
+                        "Realistic testing needs an exhibition partner.",
+                        "Noise and reluctance to speak in public may limit use.",
+                        "Content updates and answer checks require ongoing work."
+                      ]
+                    ],
+                    [
+                      "VoiceQuest: multiplayer voice mystery game",
+                      [
+                        "Team members can test the game together.",
+                        "The game tests turn-taking, interruptions, and shared context.",
+                        "One short mystery gives the prototype a clear scope."
+                      ],
+                      [
+                        "Enjoyment depends heavily on story quality.",
+                        "Simultaneous speakers make interaction difficult.",
+                        "Spoilers or inconsistent clues can break the game."
+                      ]
+                    ],
+                    [
+                      "VoiceFit: voice-controlled workout assistant",
+                      [
+                        "Hands-free control addresses a concrete inconvenience.",
+                        "Timers, pauses, and corrections give measurable tasks.",
+                        "User-defined routines reduce the need for specialist content."
+                      ],
+                      [
+                        "Existing timers may already meet user needs.",
+                        "Breathing and background noise can reduce recognition quality.",
+                        "Incorrect timing or commands can disrupt exercise."
+                      ]
+                    ],
+                    [
+                      "Reservation assistant: AI phone bookings",
+                      [
+                        "The service completes a concrete task.",
+                        "It can reach businesses without online booking.",
+                        "It tests conversation, negotiation, and delegated actions."
+                      ],
+                      [
+                        "Phone integration adds cost and complexity.",
+                        "Staff may decline or struggle with AI calls.",
+                        "Ambiguous answers can cause incorrect booking confirmations."
+                      ]
+                    ],
+                    [
+                      "Voice body double: help with task completion",
+                      [
+                        "The service addresses difficulty starting and finishing tasks.",
+                        "It tests proactive check-ins and persistent task state.",
+                        "Completion and repeat use give concrete evaluation measures."
+                      ],
+                      [
+                        "Check-ins may feel intrusive or like nagging.",
+                        "Scheduling and reconnection add complexity.",
+                        "Use may decline after the initial novelty fades."
+                      ]
+                    ],
+                    [
+                      "FamilySync: shared family scheduling",
+                      [
+                        "The service addresses recurring coordination needs.",
+                        "It tests multi-user context and consent.",
+                        "A three-person scenario gives a focused prototype."
+                      ],
+                      [
+                        "Adoption needs participation from several family members.",
+                        "Speaker identification and calendar access add complexity.",
+                        "Permission or schedule errors can undermine trust."
+                      ]
+                    ]
+                  ]
+                }
               ]
             },
             {
               "title": "Overtime discussion: everyday reflection",
               "paragraphs": [
-                "After the meetup, a few members explored a lighter role than specialized mental healthcare. These ideas did not finalize the product scope.",
-                "A hands-free brain dump could let users speak freely instead of typing, then review an organized account of their day.",
-                "Distance from their thoughts may help users view situations more objectively and notice recurring triggers or patterns. A personal checklist was suggested.",
-                "Users need private time and a space where they can speak comfortably. Some users value writing by hand, so the team must examine when speech is useful.",
-                "People may share worries with a trusted listener who helps them notice assumptions, biases, mistaken judgments, or leaps in reasoning. A diary or spoken account can still be selective or incomplete."
+                "After the meetup, a few members explored a lighter role than specialized mental healthcare. These ideas did not finalize the product scope."
               ],
-              "items": []
+              "items": [],
+              "after": [
+                {
+                  "title": "Service role: everyday reflection",
+                  "paragraphs": [
+                    "The team explored help with expressing and organizing everyday thoughts, with a lighter role than specialized mental healthcare."
+                  ],
+                  "items": []
+                },
+                {
+                  "title": "Speak, organize, gain distance, notice patterns",
+                  "paragraphs": [],
+                  "items": [
+                    "A hands-free brain dump could let users speak freely instead of typing, then review an organized account of their day.",
+                    "Distance from their thoughts may help users view situations more objectively and notice recurring triggers or patterns. A personal checklist was suggested."
+                  ]
+                },
+                {
+                  "title": "Conditions for use and trust",
+                  "paragraphs": [],
+                  "items": [
+                    "Users need private time and a space where they can speak comfortably. Some users value writing by hand, so the team must examine when speech is useful.",
+                    "People may share worries with a trusted listener who helps them notice assumptions, biases, mistaken judgments, or leaps in reasoning. A diary or spoken account can still be selective or incomplete."
+                  ]
+                }
+              ]
             },
             {
               "title": "Open questions and follow-up",
               "paragraphs": [],
-              "items": [
-                "Will use occur mainly during difficult moments, or become a daily habit?",
-                "Which output helps reflection: a summary, questions, a pattern checklist, or something else?",
-                "How should the service balance listening, questions, and alternative interpretations?",
-                "A simple shareable output was mentioned, but its form remains undefined.",
-                "Define the initial users, minimum complete experience, service boundaries, roles, and milestones."
+              "items": [],
+              "tables": [
+                {
+                  "label": "Open questions and next steps",
+                  "headers": [
+                    "Topic",
+                    "Question or task",
+                    "Status"
+                  ],
+                  "rows": [
+                    [
+                      "Use occasions",
+                      "Will use occur mainly during difficult moments, or become a daily habit?",
+                      "Needs validation"
+                    ],
+                    [
+                      "Reflection output",
+                      "Which output helps reflection: a summary, questions, a pattern checklist, or something else?",
+                      "Needs validation"
+                    ],
+                    [
+                      "Conversation style",
+                      "How should the service balance listening, questions, and alternative interpretations?",
+                      "Needs discussion"
+                    ],
+                    [
+                      "Sharing",
+                      "A simple shareable output was mentioned, but its form remains undefined.",
+                      "Form not defined"
+                    ],
+                    [
+                      "Project definition",
+                      "Define the initial users, minimum complete experience, service boundaries, roles, and milestones.",
+                      "Follow-up discussion"
+                    ]
+                  ]
+                }
               ]
             },
             {
@@ -219,7 +333,8 @@
               ],
               "items": []
             }
-          ]
+          ],
+          "structured_report": true
         }
       ]
     },

@@ -54,8 +54,26 @@ def record(r):
     photos = ''.join(f'<figure><img src="{e(p["url"])}" alt="{e(p.get("alt", p["label"]))}" loading="lazy"><figcaption>{e(p["label"])}</figcaption></figure>' for p in r['photos'])
     subsections = ''.join(f'<h3>{label}</h3><ul>'+''.join(f'<li>{e(item)}</li>' for item in r[key])+'</ul>' for label,key in [('Agenda & timeline','agenda'),('Contributions','contributions'),('Decisions & rationale','decisions'),('Next steps','next_steps')])
     timing = f"{r['date']} / {r['start_time']}–{r['end_time']} KST" if r['start_time'] and r['end_time'] else r['date']
-    details = ''.join('<section><h3>'+e(s['title'])+'</h3>'+''.join('<p>'+e(p)+'</p>' for p in s['paragraphs'])+('<ul>'+''.join('<li>'+e(i)+'</li>' for i in s['items'])+'</ul>' if s['items'] else '')+'</section>' for s in r.get('sections', []))
+    details = ''.join(report_section(s) for s in r.get('sections', []))
+    if r.get('structured_report'):
+        subsections = ''
     return f'''<article class="record"><p class="eyebrow">{e(timing)}</p><h2>{e(r['title'])}</h2><dl><dt>Venue</dt><dd>{e(r['venue'])}</dd></dl><p>{e(r['summary'])}</p>{subsections}{details}{('<h3>Work products</h3><ul>'+links(r['artifacts'])+'</ul>') if r['artifacts'] else ''}{('<h3>Activity photos</h3>'+photos) if r['photos'] else ''}</article>'''
+
+def report_table(table):
+    def cell(value):
+        if isinstance(value, list):
+            return '<ol>'+''.join('<li>'+e(item)+'</li>' for item in value)+'</ol>'
+        return e(value)
+    head = '<thead><tr>'+''.join('<th scope="col">'+e(h)+'</th>' for h in table['headers'])+'</tr></thead>'
+    rows = '<tbody>'+''.join('<tr>'+''.join('<td aria-label="'+e(label)+'">'+cell(c)+'</td>' for label,c in zip(table['headers'], row))+'</tr>' for row in table['rows'])+'</tbody>'
+    return '<div class="report-table" role="region" tabindex="0" aria-label="'+e(table['label'])+'"><table>'+head+rows+'</table></div>'
+
+def report_section(s, level=3):
+    paragraphs = ''.join('<p>'+e(p)+'</p>' for p in s.get('paragraphs', []))
+    items = '<ul>'+''.join('<li>'+e(i)+'</li>' for i in s['items'])+'</ul>' if s.get('items') else ''
+    tables = ''.join(report_table(t) for t in s.get('tables', []))
+    after = ''.join(report_section(part, min(level+1, 6)) for part in s.get('after', []))
+    return '<section class="record-section"><h'+str(level)+'>'+e(s['title'])+'</h'+str(level)+'>'+paragraphs+items+tables+after+'</section>'
 
 def build(localize=True):
     validate()
