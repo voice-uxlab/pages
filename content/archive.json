@@ -340,16 +340,94 @@
     },
     {
       "number": 3,
-      "planned_date": null,
+      "planned_date": "2026-10-25",
       "title": "Project planning",
-      "deliverable": "Project brief, user journey, interaction flow, architecture, and roles",
+      "deliverable": "Voice tarot scope, mobile web direction, and team development plan",
       "activities": [
         "Select the user problem and project topic",
         "Design the user journey and voice interaction flow",
         "Select the architecture, roles, and development plan"
       ],
-      "status": "planned",
-      "records": []
+      "status": "completed",
+      "records": [
+        {
+          "id": "meetup-03",
+          "title": "Third regular meetup: voice tarot and team development",
+          "date": "2026-10-25",
+          "start_time": "14:00",
+          "end_time": "17:00",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Hyundai Motor and Kia headquarters, Yangjae",
+          "summary": "The team changed the MIND DETOXING concept to voice tarot. The first version will use a mobile website with an immediate voice connection. The product name and voice provider remain open.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Decisions from the meeting",
+              "items": [
+                "Build a two-way tarot conversation. The user explains a question, selects a card, hears an interpretation, and asks follow-up questions.",
+                "Start with a mobile website. The user starts a voice session inside the website. A telephone number is not necessary.",
+                "Use a cute, playful visual direction. The team still needs to choose the character and detailed design.",
+                "Consider scheduled calls and payments after the immediate connection works.",
+                "Let members work on features across disciplines. Product, frontend, and backend coordinators will help resolve differences.",
+                "The goal is a working product and a successful December 16 demo. Sona remains an optional tool."
+              ]
+            },
+            {
+              "title": "What the discussion clarified",
+              "items": [
+                "The same product description led to different expectations. The specification must show the screens and conversation sequence together.",
+                "The reader must speak the interpretation. A spoken greeting followed by a text-only result does not meet the intended experience.",
+                "Do tests of Korean pronunciation, response delay, interruption, and character tone with real conversations.",
+                "Compare OpenAI and ElevenLabs before the provider decision. Their APIs have different interfaces."
+              ]
+            },
+            {
+              "title": "Progress and remaining work",
+              "items": [
+                "The team selected the product direction. A working product and live voice test results are not yet available.",
+                "The next checkpoint is one complete mobile flow: start, conversation, card selection, spoken interpretation, and end.",
+                "The proposed schedule has a November 30 demo milestone. Presentation practice follows. The submission dates need confirmation from the organizer.",
+                "The leader will prepare the first specification, API comparison, and shared development setup. Members will review the specification and select tasks.",
+                "Make a decision about the intended users, name, character, provider, cost limits, hosting, and task owners."
+              ]
+            },
+            {
+              "title": "GitHub and Codex workflow proposal",
+              "items": [
+                "These are proposed rules for development after v1.0. The meeting did not approve these detailed procedures.",
+                "Create an Issue before each task. Record the purpose, scope, acceptance criteria, owner, and reviewer.",
+                "Create one branch per task from the latest main branch. Do not commit directly to main.",
+                "Ask Codex to read AGENTS.md and the Issue. Examine its plan before implementation.",
+                "Open a small draft pull request early. Include the Issue, reason for the change, test results, and screenshots when applicable.",
+                "Ask another member to examine the change and user flow. Use Codex code review as additional help.",
+                "The leader is the first integration maintainer. This person examines the peer review and CI results before a squash merge.",
+                "Another member must examine the leader’s changes. Select a second integration maintainer for absences.",
+                "Resolve conflicts with the other task owner. Ask the relevant coordinator for help with product or interface decisions.",
+                "Use CI for type checks, lint checks, tests, and the build. Use test adapters without production secrets or paid API calls.",
+                "Deploy main to a test environment after checks pass. Check the main user flow before deployment to the demo environment.",
+                "Use GitHub Projects: Backlog, Ready, In progress, In review, and Done. Mark work Done after deployment verification.",
+                "Keep keys, raw audio, and personal conversations out of the repository. Record contributions through results, reviews, tests, and documentation.",
+                "Ask each member about preferred work, available time, blockers, and support needs. Record important decisions in the repository."
+              ]
+            },
+            {
+              "title": "Record evidence",
+              "items": [
+                "This record contains a summary of the full meeting transcript from the leader. The scheduled meeting time was 14:00–17:00 KST.",
+                "The discussion continued after the scheduled session. No activity photos accompany this update."
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 4,
@@ -429,7 +507,7 @@
       "status": "draft",
       "paragraphs": [
         "The agent must identify the user’s task from speech. It must keep information from earlier turns in the conversation. It must use tools when the task needs them.",
-        "At the second meetup, the team selected MIND DETOXING. The initial users and minimum complete experience still need definition."
+        "At the third meetup, the team changed MIND DETOXING to voice tarot. The first version will use a mobile website. The name and provider remain open."
       ],
       "evidence": [
         {
@@ -439,6 +517,10 @@
         {
           "label": "Second regular meetup record",
           "url": "week-02.html"
+        },
+        {
+          "label": "Third regular meetup record",
+          "url": "week-03.html"
         }
       ]
     },
@@ -482,7 +564,7 @@
       "paragraphs": [
         "The curriculum is a plan. Actual meeting records document the team decisions and progress.",
         "In weeks 4 and 5, the team will make the prototype and agent. In weeks 6 and 7, it will do user tests and change the interface. In week 8, it will prepare the final presentation.",
-        "The first meetup explored possible voice services. The second meetup selected MIND DETOXING and explored a lighter reflection service. The other activities remain plans."
+        "The first meetup explored possible services. The second selected MIND DETOXING. The third changed the concept to voice tarot and defined the initial web experience."
       ],
       "evidence": [
         {
@@ -496,6 +578,10 @@
         {
           "label": "Second regular meetup record",
           "url": "week-02.html"
+        },
+        {
+          "label": "Third regular meetup record",
+          "url": "week-03.html"
         }
       ]
     },
@@ -511,9 +597,16 @@
       "id": "limitations",
       "title": "Limitations & next steps",
       "guidance": "List the problems that remain and the limits of the tests. State which functions need more work.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "The product is not complete. Live voice quality tests remain necessary. The next milestone is a complete mobile conversation flow."
+      ],
+      "evidence": [
+        {
+          "label": "Third regular meetup record",
+          "url": "week-03.html"
+        }
+      ]
     },
     {
       "id": "appendix",
