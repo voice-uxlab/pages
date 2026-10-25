@@ -58,3 +58,24 @@ Proper product names and document titles keep their official forms.
 `scripts/check.py` checks document structure, local links, anchors, assets, language codes, and paired language links. It does not examine English grammar, vocabulary, readability, or STE compliance.
 
 The author also reviews the Korean text for the same facts and distinctions. ASD-STE100 is an English standard, not a Korean-language standard.
+
+## Development terms added in Week 3
+
+| Term | Meaning in this project |
+| --- | --- |
+| Issue | A GitHub task record with an owner and acceptance criteria |
+| branch | An independent sequence of Git commits |
+| commit | A recorded change in Git |
+| pull request | A proposed change for review before integration |
+| code review | An examination of a software change |
+| squash merge | Git integration that combines a pull request into one commit |
+| integration maintainer | The person who controls the order of approved code integration |
+| CI | Continuous integration checks for software changes |
+| test adapter | A controlled software substitute for an external service during tests |
+| voice session | One connection between a user and the voice service |
+| voice tarot | The selected product concept: a spoken tarot conversation with an AI character |
+| frontend | The software that supplies the user interface |
+| backend | The server software that supplies application services |
+| hosting | The service that runs the application |
+
+Week 3 copy distinguishes meeting decisions, proposed development procedures, and unfinished product work. The English review used the Issue 9 source, including sections 3–6 and dictionary entries for the affected wording. Automated website checks do not establish language compliance.
