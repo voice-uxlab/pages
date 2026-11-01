@@ -438,8 +438,59 @@
         "Use Codex for development. Keep the code in GitHub.",
         "Make an interface for speech input and output."
       ],
-      "status": "planned",
-      "records": []
+      "status": "completed",
+      "records": [
+        {
+          "id": "meetup-04",
+          "title": "Fourth regular meetup: voice tarot flow and character",
+          "date": "2026-11-01",
+          "start_time": "14:00",
+          "end_time": "17:00",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Hyundai Motor and Kia headquarters, Yangjae",
+          "summary": "The team defined the mobile voice tarot flow and selected a Y2K Queen character direction. Screen drafts and an exploratory voice test informed the next development tasks. The complete service is not yet verified.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Decisions from the meeting",
+              "items": [
+                "Start with a mobile website and one reader. Users start an immediate voice connection.",
+                "Use social login, an editable nickname, a reader profile, and a call button. Naver and Kakao are the initial login candidates.",
+                "For the first implementation, users speak three card numbers from a 78-card deck. Add a visual draw effect if feasible.",
+                "Provide mute and end controls. After the call, show the selected cards and a generated conversation summary.",
+                "Develop a cheerful, confident Queen character with a Y2K visual direction. Use Python for the backend."
+              ]
+            },
+            {
+              "title": "Observations and open questions",
+              "items": [
+                "In an exploratory voice test, the AI said it had selected cards rather than drawn them at random. It also inferred personal context without sufficient user information.",
+                "Define the random draw procedure, number recognition, interruption behavior, and session ending. Korean voice quality and session cost still need tests.",
+                "Time-limited prepaid access was discussed, including 10-minute passes. Prices, free trials, extensions, and unused time remain open.",
+                "The final product name, voice provider, storage policy, and hosting configuration remain open. OpenAI login and subscription-based API cost savings are unverified ideas."
+              ]
+            },
+            {
+              "title": "Next work: November 8",
+              "items": [
+                "The character and planning group will prepare a mood board and multi-turn dialogue examples for different concerns.",
+                "The frontend group will share editable screen drafts and build an initial prototype with a real voice API connection.",
+                "The backend group will document the technology stack, authentication, account management, data, database, and infrastructure.",
+                "Review the visual consistency after the mood board is selected. Confirm task owners and shared development rules.",
+                "At the next meeting, review the character materials, live voice prototype, and backend specification together."
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 5,
