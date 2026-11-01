@@ -431,7 +431,7 @@
     },
     {
       "number": 4,
-      "planned_date": null,
+      "planned_date": "2026-11-01",
       "title": "Voice interaction prototype",
       "deliverable": "Voice interaction UI prototype",
       "activities": [
@@ -449,7 +449,7 @@
           "timezone": "Asia/Seoul",
           "public_attendees": [],
           "venue": "Hyundai Motor and Kia headquarters, Yangjae",
-          "summary": "The team defined the mobile voice tarot flow and selected a Y2K Queen character direction. Screen drafts and an exploratory voice test informed the next development tasks. The complete service is not yet verified.",
+          "summary": "The team defined the mobile voice tarot journey from social login to the report screen. The target is a launch-ready product for the presentation review at the end of November.",
           "agenda": [],
           "contributions": [],
           "decisions": [],
@@ -460,32 +460,52 @@
           "structured_report": true,
           "sections": [
             {
-              "title": "Decisions from the meeting",
+              "title": "Announcements",
               "items": [
-                "Start with a mobile website and one reader. Users start an immediate voice connection.",
-                "Use social login, an editable nickname, a reader profile, and a call button. Naver and Kakao are the initial login candidates.",
-                "For the first implementation, users speak three card numbers from a 78-card deck. Add a visual draw effect if feasible.",
-                "Provide mute and end controls. After the call, show the selected cards and a generated conversation summary.",
-                "Develop a cheerful, confident Queen character with a Y2K visual direction. Use Python for the backend."
+                "Teams for the final presentation will be selected after review of the materials submitted at the end of November.",
+                "Development can continue after submission to improve the project."
               ]
             },
             {
-              "title": "Observations and open questions",
+              "title": "User journey",
               "items": [
-                "In an exploratory voice test, the AI said it had selected cards rather than drawn them at random. It also inferred personal context without sufficient user information.",
-                "Define the random draw procedure, number recognition, interruption behavior, and session ending. Korean voice quality and session cost still need tests.",
-                "Time-limited prepaid access was discussed, including 10-minute passes. Prices, free trials, extensions, and unused time remain open.",
-                "The final product name, voice provider, storage policy, and hosting configuration remain open. OpenAI login and subscription-based API cost savings are unverified ideas."
+                "Social login screen: Naver, Kakao, and OpenAI.",
+                "Nickname screen: user input with a random default value.",
+                "Main screen: reader profile card and a call button that opens the call screen.",
+                "Call screen: mute and end controls at the bottom, with a real-time activity effect at the top.",
+                "The user speaks three card numbers from 78 predefined cards. The interface shows a card draw effect.",
+                "The voice agent explains each selected card, then continues the consultation through voice interaction.",
+                "The call ends when credits are exhausted or the user selects the end button. The report screen then opens.",
+                "The report shows the selected cards at the top and the conversation summary below. Show a loading state during summary generation, then return to the main screen."
+              ]
+            },
+            {
+              "title": "Character and service concept",
+              "items": [
+                "Start with one confident, direct tarot reader under the Queen mindset concept. Decide later whether to add more readers."
+              ]
+            },
+            {
+              "title": "Cost and payment direction",
+              "items": [
+                "Use passes in 10-minute units. A 7-minute consultation uses one pass; a 27-minute consultation uses three passes. Unused time is discarded.",
+                "Decide later whether to offer a free trial without membership, with API cost as a constraint."
+              ]
+            },
+            {
+              "title": "Challenges and adjustments",
+              "items": [
+                "Free trials incur API costs without payment. Conversion to paying membership and the conversion flow are key design questions.",
+                "Balance membership prompts against user drop-off. Some users may reject the request, while others may be interested."
               ]
             },
             {
               "title": "Next work: November 8",
               "items": [
-                "The character and planning group will prepare a mood board and multi-turn dialogue examples for different concerns.",
-                "The frontend group will share editable screen drafts and build an initial prototype with a real voice API connection.",
-                "The backend group will document the technology stack, authentication, account management, data, database, and infrastructure.",
-                "Review the visual consistency after the mood board is selected. Confirm task owners and shared development rules.",
-                "At the next meeting, review the character materials, live voice prototype, and backend specification together."
+                "Voice implementation: connect the voice API and build an initial prototype that supports real calls.",
+                "Backend: document the technology stack, data structure, and infrastructure; prepare AWS account setup.",
+                "Design and planning: make a Figma mood board, collect references, and write sample dialogue and scenarios for the tarot reader.",
+                "Development workflow: prepare the team Git Flow guide, including AGENTS.md."
               ]
             }
           ]
