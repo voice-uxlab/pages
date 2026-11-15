@@ -367,7 +367,7 @@
   "Reflection output": "회고 결과물",
   "Conversation style": "대화 방식",
   "Needs discussion": "논의 필요",
-  "Sharing": "공유와 확산",
+  "Sharing": "공유하기",
   "Form not defined": "형태 미정",
   "Project definition": "프로젝트 구체화",
   "Follow-up discussion": "후속 논의",
@@ -479,5 +479,18 @@
   "Voice implementation: connect the voice API and build an initial prototype that supports real calls.": "음성 구현 담당: 음성 API를 연결하고 실제 통화 가능한 초기 프로토타입을 제작합니다.",
   "Backend: document the technology stack, data structure, and infrastructure; prepare AWS account setup.": "백엔드 담당: 기술 스택, 데이터 구조와 인프라 환경을 명세하고 AWS 계정 세팅을 준비합니다.",
   "Design and planning: make a Figma mood board, collect references, and write sample dialogue and scenarios for the tarot reader.": "디자인 및 기획 담당: Figma 무드보드 제작, 레퍼런스 수집, 타로 리더 예시 대사와 시나리오 작성을 진행합니다.",
-  "Development workflow: prepare the team Git Flow guide, including AGENTS.md.": "개발 협업 담당: AGENTS.md를 포함한 팀 Git Flow 가이드라인을 준비합니다."
+  "Development workflow: prepare the team Git Flow guide, including AGENTS.md.": "개발 협업 담당: AGENTS.md를 포함한 팀 Git Flow 가이드라인을 준비합니다.",
+  "Ten Minute is the leading name for the voice tarot service. The team is still considering whether to include tarot in the name and whether to use Korean.": "Ten Minute는 보이스 타로 서비스의 최종 이름 후보입니다. 이름에 타로를 포함할지, 한글 표기를 사용할지는 검토 중입니다.",
+  "Product direction": "서비스 방향",
+  "Focus on relationship questions while keeping open-ended voice consultations. Offer suggested topics as an optional starting point. The model classifies the concern from the conversation.": "연애 고민을 중심으로 하되 자유 음성 상담을 유지합니다. 미리 정한 주제는 보조 선택지로 제공하고, 모델이 대화 내용을 바탕으로 고민 유형을 판단합니다.",
+  "The reader has a cool, direct style inspired by Lee Hyori. Give brief, situation-specific feedback instead of long card explanations. Test whether prompt instructions can make the conversation feel faster.": "이효리 스타일의 쿨하고 직설적인 리더를 지향합니다. 긴 카드 설명보다 상황에 맞는 짧은 피드백을 제공하고, 프롬프트 지시로 대화 템포를 높일 수 있는지 확인합니다.",
+  "Report and spreads": "리포트와 스프레드",
+  "Provide the model with four three-card spreads and ask it to choose the best fit: past, present, future; situation, obstacle, advice; me, the other person, relationship; or option A, option B, advice.": "네 가지 3장 스프레드를 모델에 미리 제공하고 적합한 유형을 선택하게 합니다: 과거-현재-미래, 현 상태-장애물-대응책/조언, 나-상대-관계 흐름, 선택지 A-선택지 B-조언.",
+  "Reveal cards one at a time. The personal report includes card images, consultation date and time, a short message from the reader, and a one-line situation summary.": "카드를 한 장씩 순차 공개합니다. 개인 리포트에는 카드 이미지, 상담 일시, 언니의 한마디, 상황 한 줄 요약을 담습니다.",
+  "Share a URL with a compelling, light topic and a thumbnail, such as a question about finding a partner by Christmas. The destination includes a Try it myself button.": "가벼운 주제의 후킹 문구와 썸네일을 담은 URL을 공유합니다. 예를 들어 크리스마스 솔로 탈출 가능성을 묻고, 연결 화면 하단에 나도 해보기 버튼을 둡니다.",
+  "The full personal report remains private. Share content centers on the hook rather than sensitive consultation details. Masking is excluded because of implementation complexity. Preselected topics are the preferred viral format.": "개인 리포트 전문은 비공개로 유지합니다. 공유 콘텐츠는 깊은 고민 대신 후킹 문구를 중심으로 구성하고, 구현 복잡도를 고려해 마스킹은 제외합니다. 바이럴에는 미리 지정된 주제를 우선합니다.",
+  "Development and next work": "개발과 다음 작업",
+  "Align card draws with spoken interpretation. Consider a separate backend agent or model for card tasks. Check voice pacing and API capabilities during implementation.": "카드 뽑기와 음성 해석 시점을 맞추고 카드 작업은 별도 백엔드 에이전트나 모델로 처리하는 방향을 검토합니다. 구현 과정에서 음성 템포와 API 기능을 확인합니다.",
+  "Create a cover image with the name, design and implement the report, and generate 78 card images. Deploy frontend and backend projects on Vercel, separating database and authentication from the Realtime API relay. Purchase and connect a domain.": "이름을 반영한 표지와 카드 이미지 78장을 만들고 리포트 화면을 설계 및 구현합니다. 프론트엔드와 백엔드를 각자 Vercel 프로젝트로 배포하며 DB/인증 서버와 Realtime API 중계 서버를 분리합니다. 도메인을 구매하고 연결합니다.",
+  "Each member will improve and test prompts based on SOUL.md, write example conversations by relationship scenario, and try comparable phone consultation services and share feedback. Record the experience if possible.": "각자 SOUL.md를 바탕으로 프롬프트를 개선하고 테스트하며 연애 유형별 예시 대화를 작성합니다. 유사 전화 상담 서비스를 체험하고 후기를 공유하며 가능하면 녹음합니다."
 }
