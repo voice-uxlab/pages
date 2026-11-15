@@ -521,8 +521,70 @@
         "Make the AI agent. Add the functions that it needs to call tools.",
         "Write code for the tasks in the primary user scenario."
       ],
-      "status": "planned",
-      "records": []
+      "status": "completed",
+      "records": [
+        {
+          "id": "meetup-05",
+          "title": "Fifth regular meetup: voice, design, and MVP architecture",
+          "date": null,
+          "start_time": null,
+          "end_time": null,
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "",
+          "summary": "The team reviewed voice candidates, selected a visual direction, and discussed infrastructure and product policies. Follow-up work and unresolved decisions are recorded as of the meeting.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Voice models",
+              "items": [
+                "The team discussed latency in the current OpenAI text to ElevenLabs speech pipeline and a possible provider change. Streaming, WebSocket support, and latency require verification.",
+                "The team tested Typecast voices including Miran and Gain. Some preferred their Korean naturalness. Speed, emotion, and tone controls and different tones for readings and questions were discussed."
+              ]
+            },
+            {
+              "title": "Visual direction",
+              "items": [
+                "The team favored the 1108 metallic concept with Y2K analog elements, a blurred star background, and silver and gray tones.",
+                "A Western blonde Barbie-style mascot was selected as a reference. Original or appropriately licensed assets and rights review are needed for the mascot and planned 78-card illustrations.",
+                "Each designer will prepare three font candidates. Intro sound effects or subtle background music remain under consideration."
+              ]
+            },
+            {
+              "title": "Infrastructure and development",
+              "items": [
+                "Use Vercel initially for MVP speed and defer AWS due to management overhead. The team plans to share costs.",
+                "Use a monorepo for web, future mobile, backend, specifications, and documentation. A Git Flow guide covering branches and commits was completed.",
+                "React and TypeScript frontend setup is in progress. Define user and report properties, database schema, and REST APIs."
+              ]
+            },
+            {
+              "title": "Product questions",
+              "items": [
+                "Reaffirmed 10-minute charging units and expiration of unused time within a session. Revisit the 10-, 20-, and 30-minute labels and assess a new-user trial after checking API cost.",
+                "The discussed initial target was women in their late teens through their 30s. Check legal requirements for minors.",
+                "Decide between button and voice-command ending, recognizing voice recognition may fail. Categorize concerns such as relationships and work.",
+                "Social compatibility readings are a post-MVP idea. Storing voice conversations for feedback with optional consent was discussed; the policy remains open."
+              ]
+            },
+            {
+              "title": "Follow-up work and original deadlines",
+              "items": [
+                "Share voice candidates and compare ElevenLabs and OpenAI TTS API capabilities and latency.",
+                "Prepare three font candidates per designer. Upload UI v1.0 to Figma by November 12 at midnight and complete the team vote by November 13 at 12:00.",
+                "Prepare a design and voice integration before November 15 and collect references for 78 card illustrations. Draft the database schema, user and report properties, and REST API list. Completion of these planned tasks has not been verified."
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 6,
