@@ -24,7 +24,7 @@ def validate():
             assert r['publication_reviewed'] is True, 'Publish only reviewed records'
             assert r['timezone'] == 'Asia/Seoul'
             assert r['summary'].strip(), 'Records need a substantive public summary'
-            date.fromisoformat(r['date'])
+            date.fromisoformat(r['date']) if r['date'] else None
             for asset in r['photos'] + r['artifacts']:
                 assert asset.get('label') and asset.get('url')
                 assert asset['url'].startswith(('https://', 'assets/')), 'Use HTTPS or local assets'
@@ -53,7 +53,7 @@ def week_cards():
 def record(r):
     photos = ''.join(f'<figure><img src="{e(p["url"])}" alt="{e(p.get("alt", p["label"]))}" loading="lazy"><figcaption>{e(p["label"])}</figcaption></figure>' for p in r['photos'])
     subsections = ''.join(f'<h3>{label}</h3><ul>'+''.join(f'<li>{e(item)}</li>' for item in r[key])+'</ul>' for label,key in [('Agenda & timeline','agenda'),('Contributions','contributions'),('Decisions & rationale','decisions'),('Next steps','next_steps')])
-    timing = f"{r['date']} / {r['start_time']}–{r['end_time']} KST" if r['start_time'] and r['end_time'] else r['date']
+    timing = f"{r['date']} / {r['start_time']}–{r['end_time']} KST" if r['date'] and r['start_time'] and r['end_time'] else (r['date'] or 'Date not available')
     details = ''.join(report_section(s) for s in r.get('sections', []))
     if r.get('structured_report'):
         subsections = ''
@@ -85,7 +85,7 @@ def build(localize=True):
     (OUT / '.nojekyll').touch()
     completed = sum(w['status'] == 'completed' for w in DATA['weeks'])
     records = [(w,r) for w in DATA['weeks'] for r in w['records']]
-    latest = ''.join(f'<a class="entry" href="week-{w["number"]:02}.html"><span>{e(r["date"])}</span><h3>{e(r["title"])}</h3><span>Week {w["number"]:02}</span></a>' for w,r in sorted(records,key=lambda x:x[1]['date'],reverse=True)[:5]) or '<div class="empty"><h3>No activity records</h3><p>No activity records are available. The pages below contain the plan for each week.</p></div>'
+    latest = ''.join(f'<a class="entry" href="week-{w["number"]:02}.html"><span>{e(r["date"] or "Date not available")}</span><h3>{e(r["title"])}</h3><span>Week {w["number"]:02}</span></a>' for w,r in sorted(records,key=lambda x:x[1]['date'] or '',reverse=True)[:5]) or '<div class="empty"><h3>No activity records</h3><p>No activity records are available. The pages below contain the plan for each week.</p></div>'
     page('index.html','Work archive','Archive',intro('Voice UX study','Voice UX Lab','We will make a voice interface during this eight-week program. This website contains our plans, work records, and final report.')+f'''<div class="facts"><div><span>Program window</span><strong>Oct 3 – Nov 30, 2026</strong></div><div><span>Weekly sessions</span><strong>8 weeks · {len(records)} activity records</strong></div><div><span>Project concept</span><strong>Voice tarot / In planning</strong></div></div><section><div class="section-title"><h2>New work records</h2><a href="weeks.html">All weeks</a></div>{latest}</section><section><div class="section-title"><h2>Eight-week plan</h2><span>Week plans</span></div><div class="week-grid">{week_cards()}</div></section><a class="report-banner" href="report.html"><span class="eyebrow">Final report</span><h2>Final project report</h2><p>The report will contain the demo, design decisions, test results, and each team member’s comments.</p><span class="pill">Read the draft report</span></a>''')
     page('weeks.html','Weekly work','Weekly work',intro('Work archive','Weekly work','Meetings are in person near Yangjae Citizen’s Forest Station. Weeks 1 and 2 ran from 14:00 to 18:00 KST. Weeks 3–8 run from 14:00 to 17:00 KST.')+f'<div class="week-grid">{week_cards()}</div><aside class="note"><h2>Activity record contents</h2><p>Each record contains the date, time, approved attendee names, location, activity details, photos, and work products. It also contains decisions, reasons, tasks, and plans for the next meeting. The team must also submit the official Notion activity log.</p></aside>')
     for w in DATA['weeks']:
