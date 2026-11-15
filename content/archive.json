@@ -526,15 +526,71 @@
     },
     {
       "number": 6,
-      "planned_date": null,
+      "planned_date": "2026-11-15",
       "title": "User testing & improvement",
       "deliverable": "Test findings, improvement list, and revised MVP",
       "activities": [
         "Do user tests and collect feedback",
         "Use the test results to decrease errors and response time."
       ],
-      "status": "planned",
-      "records": []
+      "status": "completed",
+      "records": [
+        {
+          "id": "meetup-06",
+          "title": "Sixth regular meetup: report, sharing, and voice persona",
+          "date": "2026-11-15",
+          "start_time": "14:00",
+          "end_time": "17:00",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Hyundai Motor and Kia headquarters, Yangjae",
+          "summary": "The team discussed the report, sharing, the reader persona, and a focus on relationship questions. The work below remains planned unless stated otherwise.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Product direction",
+              "items": [
+                "Ten Minute is the leading name. Whether to include tarot or use Korean remains open. Focus on relationship questions while keeping free consultation; suggested topics are optional, and the model classifies concerns from the conversation."
+              ]
+            },
+            {
+              "title": "Report and spreads",
+              "items": [
+                "Provide four spreads to the model and ask it to select one: past, present, future; situation, obstacle, advice; me, the other person, relationship; or option A, option B, advice.",
+                "Reveal the cards one at a time. The personal report includes card images, consultation date and time, a short message from the reader, and a one-line situation summary."
+              ]
+            },
+            {
+              "title": "Sharing",
+              "items": [
+                "Share a URL with a light, compelling thumbnail and a Try it myself button on the destination. The full personal report stays private; share images focus on a hook. Masking is excluded due to complexity, and preselected topics are preferred for viral sharing."
+              ]
+            },
+            {
+              "title": "Persona and voice",
+              "items": [
+                "Use a cool, direct style inspired by Lee Hyori. Give short feedback suited to the situation rather than long card explanations. Test prompt instructions for a faster conversational tempo.",
+                "The team observed a timing mismatch between drawing a card and interpreting it. Consider a separate backend agent or model for card tasks. The meeting compared Live API and Realtime API speed controls; verify capabilities during implementation."
+              ]
+            },
+            {
+              "title": "Next work",
+              "items": [
+                "Create a cover with the name and 78 card images. Design and implement the report.",
+                "Deploy frontend and backend projects on Vercel. Separate the database and authentication server from the Realtime API relay. Buy and connect a domain.",
+                "Each member will improve and test prompts based on SOUL.md, write few-shot examples by relationship scenario, and try comparable phone consultation services and share feedback. Record the experience if possible."
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 7,
