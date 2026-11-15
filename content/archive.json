@@ -514,7 +514,7 @@
     },
     {
       "number": 5,
-      "planned_date": null,
+      "planned_date": "2026-11-08",
       "title": "AI agent & MVP",
       "deliverable": "MVP with primary functions",
       "activities": [
@@ -526,12 +526,12 @@
         {
           "id": "meetup-05",
           "title": "Fifth regular meetup: voice, design, and MVP architecture",
-          "date": null,
-          "start_time": null,
-          "end_time": null,
+          "date": "2026-11-08",
+          "start_time": "14:00",
+          "end_time": "17:00",
           "timezone": "Asia/Seoul",
           "public_attendees": [],
-          "venue": "",
+          "venue": "Hyundai Motor and Kia headquarters, Yangjae",
           "summary": "The team reviewed voice candidates, selected a visual direction, and discussed infrastructure and product policies. Follow-up work and unresolved decisions are recorded as of the meeting.",
           "agenda": [],
           "contributions": [],
