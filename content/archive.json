@@ -656,15 +656,56 @@
     },
     {
       "number": 7,
-      "planned_date": null,
+      "planned_date": "2026-11-22",
       "title": "Voice UX improvements",
       "deliverable": "MVP improvements and optional multimodal demo",
       "activities": [
         "Use the test results to change the voice interface.",
         "Add camera, display, or hardware support only if needed"
       ],
-      "status": "planned",
-      "records": []
+      "status": "completed",
+      "records": [
+        {
+          "id": "meetup-07",
+          "title": "Seventh regular meetup: submission and consultation flow",
+          "date": "2026-11-22",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Not recorded",
+          "summary": "The team reviewed the Ten Minutes consultation flow, card selection, and the voice of the reader, Lena. The goal was a service that judges could try directly.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Submission preparation",
+              "items": [
+                "The team set November 27 at 17:00 KST as its work cutoff. It prioritized visual polish and natural Korean speech for the review build."
+              ]
+            },
+            {
+              "title": "Card selection and reading",
+              "items": [
+                "Users select cards on screen because the model had difficulty recognizing spoken card numbers. The team planned to reveal and interpret cards one at a time. It considered using a modal for selection.",
+                "The first version uses the same interpretation regardless of card orientation. The four spreads cover time, a situation and advice, a relationship, and a choice between two options."
+              ]
+            },
+            {
+              "title": "Voice and integration",
+              "items": [
+                "The team planned to write natural Korean examples for the opening, each spread, and the closing. It kept the Realtime model to synchronize speech with the interface and planned to check the complete flow in a preview environment."
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 8,

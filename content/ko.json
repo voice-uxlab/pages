@@ -528,5 +528,17 @@
   "Infrastructure and development": "인프라와 개발",
   "Product questions": "서비스 기획과 미정 사항",
   "Follow-up work and original deadlines": "후속 작업과 당시 기한",
-  "2026-11-15 / 14:00–17:00 KST": "2026년 11월 15일 / 14:00–17:00 한국 표준시"
+  "2026-11-15 / 14:00–17:00 KST": "2026년 11월 15일 / 14:00–17:00 한국 표준시",
+  "Seventh regular meetup: submission and consultation flow": "7차 정기 모임 (제출 준비 및 상담 흐름)",
+  "The team reviewed the Ten Minutes consultation flow, card selection, and the voice of the reader, Lena. The goal was a service that judges could try directly.": "Ten Minutes의 상담 흐름, 카드 선택, 타로 리더 레나의 음성을 점검했습니다. 심사위원이 직접 체험할 수 있는 서비스가 목표였습니다.",
+  "Submission preparation": "제출 준비",
+  "The team set November 27 at 17:00 KST as its work cutoff. It prioritized visual polish and natural Korean speech for the review build.": "팀 작업 마감은 11월 27일 17시로 정했습니다. 심사용 버전은 화면 완성도와 자연스러운 한국어 음성을 우선했습니다.",
+  "Card selection and reading": "카드 선택과 리딩",
+  "Users select cards on screen because the model had difficulty recognizing spoken card numbers. The team planned to reveal and interpret cards one at a time. It considered using a modal for selection.": "모델이 음성으로 말한 카드 번호를 잘 인식하지 못해 사용자가 화면에서 직접 카드를 고르는 방식으로 바꿨습니다. 카드는 한 장씩 공개하고 해석하기로 했으며, 카드 선택 모달은 구현 후보로 검토했습니다.",
+  "The first version uses the same interpretation regardless of card orientation. The four spreads cover time, a situation and advice, a relationship, and a choice between two options.": "초기 버전에서는 카드의 정방향과 역방향을 구분하지 않습니다. 스프레드는 시간 흐름, 상황과 조언, 관계 흐름, 선택지 비교의 네 가지입니다.",
+  "Voice and integration": "음성 및 연동",
+  "The team planned to write natural Korean examples for the opening, each spread, and the closing. It kept the Realtime model to synchronize speech with the interface and planned to check the complete flow in a preview environment.": "팀원이 카드 선택 전, 스프레드별 해석, 상담 마무리에 쓰는 자연스러운 한국어 예시 문구를 직접 작성하기로 했습니다. 음성과 화면을 맞추기 위해 Realtime 모델을 유지하고, 프리뷰 환경에서 전체 상담 흐름을 확인할 계획이었습니다.",
+  "Not recorded": "기록 없음",
+  "2026-11-22": "2026년 11월 22일",
+  "2026-11-08 / 14:00–17:00 KST": "2026년 11월 8일 / 14:00–17:00 한국 표준시"
 }
