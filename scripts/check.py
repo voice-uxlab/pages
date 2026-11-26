@@ -39,7 +39,7 @@ for path in build.OUT.glob('*.html'):
     doc.feed(path.read_text())
     assert doc.h1 == 1 and doc.main == 1 and doc.lang and doc.viewport, path.name
     docs[path.name] = doc
-assert len(docs) == 26
+assert len(docs) == 28
 checked = 0
 for name, doc in docs.items():
     base_name = name.replace('.ko.html', '.html')

@@ -5,3 +5,5 @@
 @media(max-width:720px){.report-table{overflow:visible;border:0;border-radius:0}.report-table table,.report-table tbody,.report-table tr,.report-table td{display:block;width:100%;min-width:0}.report-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.report-table tr{border:1px solid #ddd;border-radius:8px;margin:0 0 18px;overflow:hidden}.report-table td,.report-table td:first-child{width:100%;border-right:0;padding:14px 16px}.report-table td:first-child{background:#f3f3f3;font-weight:600}.report-table td::before{content:attr(aria-label);display:block;font-size:12px;color:#666;margin-bottom:7px;font-weight:600}.report-table tr:last-child td{border-bottom:1px solid #ddd}.report-table tr td:last-child{border-bottom:0}}
 
 .weekly-records,.weekly-records .record{width:100%;max-width:none}.weekly-records h2{margin-top:40px}.weekly-records .record-section p{max-width:none}
+
+.orientation-entry{margin:0 0 1.75rem;background:#edf5f4;padding-inline:1rem;border-block:1px solid #dbe8e6}.orientation-entry h3{margin:0}.orientation-entry:hover{background:#e4f0ee}

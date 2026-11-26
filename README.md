@@ -43,7 +43,7 @@ This public site complements official reporting; it does not replace it. Keep of
 ## Navigation
 
 - Archive: latest published activity and the eight-week journey.
-- Weekly work: all planned sessions and reviewed activity records.
+- Weekly work: the bilingual October 11, 2026 orientation deck, then all planned sessions and reviewed activity records.
 - Project: the Sona proposal, with implementation status stated explicitly.
 - Final report: summary, problem, demo, architecture, development, evaluation, learning, contributions, limitations, and artifacts.
 - About: context, team, and archive purpose.
@@ -51,6 +51,8 @@ This public site complements official reporting; it does not replace it. Keep of
 The visual direction uses generous whitespace, plain typography, a quiet navigation rail, and editorial blocks inspired by the OpenAI homepage. No OpenAI logos, brand assets, or affiliation claims are used.
 
 ## Languages
+
+The orientation deck content is in `orientation/assets/content.js` and the browser shell is in `orientation/template.html`. It opens in reading mode. Visitors can select Present for the original slide-by-slide view.
 
 Each English page has a Korean page with the suffix `.ko.html`. The footer menu has EN and KR links to the same page. Navigation keeps the selected language. The picker works without JavaScript. Each page has the correct HTML language and alternate-language links.
 

@@ -47,6 +47,10 @@ def page(filename, title, active, content):
 def intro(kicker, title, description):
     return f'<div class="intro"><p class="eyebrow">{e(kicker)}</p><h1>{e(title)}</h1><p class="lede">{e(description)}</p></div>'
 
+def orientation_card():
+    return ('<a class="entry orientation-entry" href="orientation.html">'
+            '<span>2026-10-11</span><h3>Team orientation</h3><span>Kickoff deck</span></a>')
+
 def week_cards():
     return ''.join(f'''<a class="week-card" href="week-{w['number']:02}.html"><div class="card-top"><span>Week {w['number']:02}</span><span class="status">{e('Plan' if w['status']=='planned' else w['status'].replace('-', ' '))}</span></div><h3>{e(w['title'])}</h3><p>{e(w['deliverable'])}</p><span class="card-date">{date.fromisoformat(w['planned_date']).strftime('%b %d, %Y') if w['planned_date'] else 'Date not available'}</span></a>''' for w in DATA['weeks'])
 
@@ -87,7 +91,7 @@ def build(localize=True):
     records = [(w,r) for w in DATA['weeks'] for r in w['records']]
     latest = ''.join(f'<a class="entry" href="week-{w["number"]:02}.html"><span>{e(r["date"] or "Date not available")}</span><h3>{e(r["title"])}</h3><span>Week {w["number"]:02}</span></a>' for w,r in sorted(records,key=lambda x:x[1]['date'] or '',reverse=True)[:5]) or '<div class="empty"><h3>No activity records</h3><p>No activity records are available. The pages below contain the plan for each week.</p></div>'
     page('index.html','Work archive','Archive',intro('Voice UX study','Voice UX Lab','We will make a voice interface during this eight-week program. This website contains our plans, work records, and final report.')+f'''<div class="facts"><div><span>Program window</span><strong>Oct 3 – Nov 30, 2026</strong></div><div><span>Weekly sessions</span><strong>8 weeks · {len(records)} activity records</strong></div><div><span>Project concept</span><strong>Voice tarot / In planning</strong></div></div><section><div class="section-title"><h2>New work records</h2><a href="weeks.html">All weeks</a></div>{latest}</section><section><div class="section-title"><h2>Eight-week plan</h2><span>Week plans</span></div><div class="week-grid">{week_cards()}</div></section><a class="report-banner" href="report.html"><span class="eyebrow">Final report</span><h2>Final project report</h2><p>The report will contain the demo, design decisions, test results, and each team member’s comments.</p><span class="pill">Read the draft report</span></a>''')
-    page('weeks.html','Weekly work','Weekly work',intro('Work archive','Weekly work','Meetings are in person near Yangjae Citizen’s Forest Station. Weeks 1 and 2 ran from 14:00 to 18:00 KST. Weeks 3–8 run from 14:00 to 17:00 KST.')+f'<div class="week-grid">{week_cards()}</div><aside class="note"><h2>Activity record contents</h2><p>Each record contains the date, time, approved attendee names, location, activity details, photos, and work products. It also contains decisions, reasons, tasks, and plans for the next meeting. The team must also submit the official Notion activity log.</p></aside>')
+    page('weeks.html','Weekly work','Weekly work',intro('Work archive','Weekly work','Meetings are in person near Yangjae Citizen’s Forest Station. Weeks 1 and 2 ran from 14:00 to 18:00 KST. Weeks 3–8 run from 14:00 to 17:00 KST.')+orientation_card()+f'<div class="week-grid">{week_cards()}</div><aside class="note"><h2>Activity record contents</h2><p>Each record contains the date, time, approved attendee names, location, activity details, photos, and work products. It also contains decisions, reasons, tasks, and plans for the next meeting. The team must also submit the official Notion activity log.</p></aside>')
     for w in DATA['weeks']:
         items = ''.join(f'<li>{e(item)}</li>' for item in w['activities'])
         body = intro(f'Week {w["number"]:02} / {('Plan' if w['status']=='planned' else w['status'].replace('-', ' '))}',w['title'],w['deliverable'])
@@ -115,6 +119,8 @@ def build(localize=True):
         from i18n import korean_page
         for source in list(OUT.glob('*.html')):
             (OUT / source.name.replace('.html', '.ko.html')).write_text(korean_page(source.read_text()), encoding='utf-8')
+    from build_orientation import publish_orientation
+    publish_orientation(ROOT, OUT, localize)
     print(f'Built {len(list(OUT.glob("*.html")))} pages in {OUT}')
 
 if __name__ == '__main__': build()
