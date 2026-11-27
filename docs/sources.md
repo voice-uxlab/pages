@@ -33,3 +33,13 @@ The guide gives the activity period and the December 7 log deadline. It specifie
 The connector could read public pages and calendar schemas. It could not read calendar rows. Thus, the site does not give individual meeting dates or claim completed work from those calendars.
 
 No private contact details, participant records, original media, signed file URLs, or restricted orientation materials were imported.
+
+## Project case study update
+
+Review date: November 27, 2026.
+
+The team supplied a project chat export covering preparation, async collaboration, research, design, prompt tuning, and integration work through November 27. Only public-safe summaries are included. The export itself, original media, personal conversations, account information, credentials, internal expenses and private links are not published.
+
+Public technical evidence: https://github.com/voice-uxlab/ten-minutes (source, feature specifications, frontend documentation, Git Flow and card asset guide).
+
+The weekly archive records historical decisions as they occurred. The Project and Research pages summarize the current prototype and study findings. Device test observations were reported by team members; formal evaluations and final presentation outcomes remain unverified.

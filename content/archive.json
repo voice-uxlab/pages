@@ -51,9 +51,9 @@
           "contributions": [],
           "decisions": [
             "Build a useful service with a complete user scenario and quality suitable for a portfolio. An MVP alone is not the final goal.",
-            "Shared GitHub and OpenAI Organization account information for collaboration.",
             "Do not use the program facilitator assistant.",
-            "Use approximately KRW 400,000 of the leader facilitator allowance for voice API costs. Members expressed willingness to contribute some personal funds if needed. Costs remain uncertain, and excessive personal costs could be difficult. Ask for news of support programs."
+            "Set up shared GitHub and OpenAI workspaces for collaboration.",
+            "Plan API usage within a defined budget and review costs as development progresses."
           ],
           "next_steps": [
             "Set criteria to compare ideas and select the project topic.",
@@ -63,6 +63,38 @@
           "photos": [],
           "artifacts": [],
           "publication_reviewed": true
+        },
+        {
+          "id": "orientation-preparation",
+          "title": "Preparing for the orientation",
+          "date": "2026-10-06",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "Members were asked to prepare their development environment and observe voice interactions before the first meeting.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Preparation and learning goals",
+              "paragraphs": [],
+              "items": [
+                "Set up GitHub and Codex and confirm access to the OpenAI API.",
+                "Try existing voice AI services and note when speaking feels natural or frustrating.",
+                "Bring one or two ideas that address a real user need. No specific framework was prescribed."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
         }
       ]
     },
@@ -335,6 +367,38 @@
             }
           ],
           "structured_report": true
+        },
+        {
+          "id": "idea-selection-process",
+          "title": "From ideas to a shared project",
+          "date": "2026-10-18",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "The team used a structured proposal and voting process before selecting its first project concept.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Collaborative ideation",
+              "paragraphs": [],
+              "items": [
+                "Members submitted proposals using a common template in GitHub Issues and discussed the proposals with one another.",
+                "The team voted on the proposals and selected MIND DETOXING. The detailed scope remained open.",
+                "The team explored everyday reflection as a less specialized alternative to mental-health care."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
         }
       ]
     },
@@ -426,6 +490,38 @@
               ]
             }
           ]
+        },
+        {
+          "id": "concept-research-and-specification",
+          "title": "Voice service research and feature specifications",
+          "date": "2026-10-29",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "After choosing voice tarot, the team collected service references and prepared narrower feature-level specifications.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Research and product discovery",
+              "paragraphs": [],
+              "items": [
+                "Explore existing voice-agent architectures that combine real-time communication, speech recognition and speech synthesis.",
+                "Collect tarot interaction references and initial character and scenario concepts.",
+                "Write specifications around individual features to keep the scope actionable and reviewable."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
         }
       ]
     },
@@ -509,6 +605,38 @@
               ]
             }
           ]
+        },
+        {
+          "id": "prototype-exploration",
+          "title": "Prototype exploration and interaction testing",
+          "date": "2026-11-07",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "The team explored multiple mobile concepts and developed an early scripted prototype.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "What the prototype made possible",
+              "paragraphs": [],
+              "items": [
+                "Compare alternative layouts and visual directions before investing in full implementation.",
+                "Use a scripted demonstration to test card selection and report navigation without a microphone or paid API call.",
+                "Separate the initial interface prototype from real-time voice integration."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
         }
       ]
     },
@@ -583,6 +711,65 @@
               ]
             }
           ]
+        },
+        {
+          "id": "design-and-stack-decisions",
+          "title": "Design selection and frontend foundation",
+          "date": "2026-11-13",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "Three visual directions were compared with a common layout. The team also prepared the frontend and backend structure.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [
+            {
+              "label": "Ten Minutes source repository",
+              "url": "https://github.com/voice-uxlab/ten-minutes",
+              "publication_approved": true
+            },
+            {
+              "label": "Git Flow guide",
+              "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/git-flow.md",
+              "publication_approved": true
+            },
+            {
+              "label": "Frontend documentation",
+              "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/apps/voice-tarot",
+              "publication_approved": true
+            }
+          ],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Visual concepts",
+              "paragraphs": [],
+              "items": [
+                "Compare Y2K, metallic and combined directions through team review and voting.",
+                "Refine the selected metallic direction while maintaining the intended interaction flow.",
+                "Use original character and card assets, subject to rights review."
+              ],
+              "tables": [],
+              "after": []
+            },
+            {
+              "title": "Development foundation",
+              "paragraphs": [],
+              "items": [
+                "Prepare a structured React and TypeScript frontend and FastAPI backend.",
+                "Organize the product repository around feature specifications, implementation and technical documentation.",
+                "Define a Git Flow for feature branches, reviews and integration."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
         }
       ]
     },
@@ -651,6 +838,56 @@
               ]
             }
           ]
+        },
+        {
+          "id": "design-assets-and-test-research",
+          "title": "Design delivery and exploratory user research",
+          "date": "2026-11-21",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "Design work progressed to the report and sharing flow. Members tried existing tarot consultation services to understand real interactions.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [
+            {
+              "label": "Tarot card asset guide",
+              "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/tarot-card-assets.md",
+              "publication_approved": true
+            }
+          ],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Design deliverables",
+              "paragraphs": [],
+              "items": [
+                "The design team completed updated home, card-by-card reading, report and sharing screens.",
+                "The team reported completion of 78 card illustrations and prepared the assets for integration.",
+                "The backend API and frontend preview were deployed for integration review."
+              ],
+              "tables": [],
+              "after": []
+            },
+            {
+              "title": "Exploratory observations",
+              "paragraphs": [],
+              "items": [
+                "Members explored phone, in-person and digital tarot experiences. Some consultations were difficult to access immediately.",
+                "Participants observed differences in onboarding, card participation, conversational depth and time limits.",
+                "These observations suggested opportunities for accessible entry, visible card selection and an intentional closing.",
+                "The exercise was exploratory. It does not establish representative market findings."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
         }
       ]
     },
@@ -704,12 +941,66 @@
               ]
             }
           ]
+        },
+        {
+          "id": "prompt-and-product-integration",
+          "title": "Prompt refinement and product integration",
+          "date": "2026-11-25",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "The team combined the character, consultation flow, card knowledge and application actions into an explicit prompt version, and integrated the product components.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [
+            {
+              "label": "Feature specifications",
+              "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/specs",
+              "publication_approved": true
+            },
+            {
+              "label": "Frontend documentation",
+              "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/apps/voice-tarot",
+              "publication_approved": true
+            }
+          ],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Human-led dialogue refinement",
+              "paragraphs": [],
+              "items": [
+                "Refine 78 card descriptions, flow instructions, example utterances and the Lena persona by human review.",
+                "Prefer concise, natural Korean speech to lengthy explanations, repeated questions or formal phrasing.",
+                "Publish a versioned Realtime prompt so that integration uses an explicit revision."
+              ],
+              "tables": [],
+              "after": []
+            },
+            {
+              "title": "Integration milestone",
+              "paragraphs": [],
+              "items": [
+                "Bring voice connection and speech synthesis into the FastAPI-backed application.",
+                "Connect card selection, sequential reveal and report storage with the frontend.",
+                "Keep the first release focused on a single consultation flow. Additional draws and payments remain future scope."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
         }
       ]
     },
     {
       "number": 8,
-      "planned_date": null,
+      "planned_date": "2026-11-29",
       "title": "Share results & prepare the demo",
       "deliverable": "Final code, technical docs, presentation, and demo",
       "activities": [
@@ -717,8 +1008,68 @@
         "Make presentation materials and a demo",
         "Hold the results meeting. Do a presentation rehearsal."
       ],
-      "status": "planned",
-      "records": []
+      "status": "in-progress",
+      "records": [
+        {
+          "id": "submission-integration-review",
+          "title": "Submission build and integration review",
+          "date": "2026-11-27",
+          "start_time": "",
+          "end_time": "",
+          "timezone": "Asia/Seoul",
+          "public_attendees": [],
+          "venue": "Asynchronous collaboration",
+          "summary": "The team prepared a submission build and reported successful basic login and voice consultation in device testing. Complete acceptance and submission were not yet verified at the time of this record.",
+          "agenda": [],
+          "contributions": [],
+          "decisions": [],
+          "next_steps": [],
+          "photos": [],
+          "artifacts": [
+            {
+              "label": "Ten Minutes source repository",
+              "url": "https://github.com/voice-uxlab/ten-minutes",
+              "publication_approved": true
+            },
+            {
+              "label": "Frontend documentation",
+              "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/apps/voice-tarot",
+              "publication_approved": true
+            },
+            {
+              "label": "Tarot card asset guide",
+              "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/tarot-card-assets.md",
+              "publication_approved": true
+            }
+          ],
+          "publication_reviewed": true,
+          "structured_report": true,
+          "sections": [
+            {
+              "title": "Integration and testing",
+              "paragraphs": [],
+              "items": [
+                "Review the deployed mobile flow, authentication, card interaction, voice playback and report handling.",
+                "Resolve integration issues while checking Android and iPhone behavior.",
+                "Basic consultation worked in reported tests. Conversation pacing, consistent behavior and complete end-to-end verification remain improvement targets."
+              ],
+              "tables": [],
+              "after": []
+            },
+            {
+              "title": "Next milestones",
+              "paragraphs": [],
+              "items": [
+                "November 27: submission materials and review build deadline.",
+                "November 29: planned final regular meetup; November 30: official study period ends.",
+                "December 16: cohort project presentation. Additional improvements and rehearsal are planned before the event."
+              ],
+              "tables": [],
+              "after": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "report": [
@@ -726,9 +1077,26 @@
       "id": "overview",
       "title": "Executive summary",
       "guidance": "State the user problem and the project scope. Give the primary results and limitations.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "Voice UX Lab is an eight-week study of voice-first AI interaction and collaborative development. The team built Ten Minutes, a mobile voice tarot prototype with interactive card selection and personal reports.",
+        "As of November 27, basic login and consultation were reported to work in device tests. The team was preparing the submission build; full acceptance, measured voice quality and presentation outcomes are not yet verified."
+      ],
+      "evidence": [
+        {
+          "label": "Ten Minutes project overview",
+          "url": "project.html"
+        },
+        {
+          "label": "Week 08 activity record",
+          "url": "week-08.html"
+        },
+        {
+          "label": "Ten Minutes source repository",
+          "url": "https://github.com/voice-uxlab/ten-minutes"
+        }
+      ],
+      "sections": []
     },
     {
       "id": "problem",
@@ -736,55 +1104,183 @@
       "guidance": "Give the task, user needs, research questions, and success criteria.",
       "status": "draft",
       "paragraphs": [
-        "The agent must identify the user’s task from speech. It must keep information from earlier turns in the conversation. It must use tools when the task needs them.",
-        "At the third meetup, the team changed MIND DETOXING to voice tarot. The first version will use a mobile website. The name and provider remain open."
+        "Voice offers a natural medium for a personal conversation, but precise selections and persistent results benefit from a screen. Ten Minutes explores the balance between those two interaction modes.",
+        "The team investigated Korean speech naturalness, character consistency, turn-taking, session pacing and the alignment of conversation with application state."
       ],
       "evidence": [
         {
-          "label": "Published Voice UX Lab study brief",
-          "url": "https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34"
-        },
-        {
-          "label": "Second regular meetup record",
-          "url": "week-02.html"
-        },
-        {
-          "label": "Third regular meetup record",
+          "label": "Week 03 activity record",
           "url": "week-03.html"
+        },
+        {
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Voice UX research notes",
+          "url": "research.html"
         }
-      ]
+      ],
+      "sections": []
     },
     {
       "id": "demo",
       "title": "Agent & demo",
       "guidance": "Add links to the demo, source code, video, and setup instructions. List the tasks that the agent can do.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "The prototype combines voice conversation, question clarification, a selection from 78 cards, sequential interpretation and a personal report. The current demonstration is a working prototype, not a claim of a completed commercial product.",
+        "The public repository contains setup instructions. Demo availability can vary while integration testing continues. A recording and final presentation will be added when approved and available."
+      ],
+      "evidence": [
+        {
+          "label": "Ten Minutes prototype (availability may vary)",
+          "url": "https://ten-minutes-tarot.vercel.app/"
+        },
+        {
+          "label": "Ten Minutes source repository",
+          "url": "https://github.com/voice-uxlab/ten-minutes"
+        },
+        {
+          "label": "Frontend documentation",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/apps/voice-tarot"
+        },
+        {
+          "label": "Feature specifications",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/specs"
+        }
+      ],
+      "sections": []
     },
     {
       "id": "architecture",
       "title": "Design & architecture",
       "guidance": "Show the system design and the voice interface. Include tool calls, handoffs, and guardrails only if the project uses them. Give the reasons for design decisions.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "The application uses a React and TypeScript mobile web frontend, a FastAPI backend, PostgreSQL and Vercel. The browser connects to OpenAI Realtime over WebRTC; model response text is synthesized into speech through Typecast.",
+        "Application-controlled actions coordinate card selection and reveal with the conversational agent. The backend manages consultation state, card data and report persistence.",
+        "The hybrid approach supports voice selection but requires explicit handling of interruption, playback timing, and reconnection."
+      ],
+      "evidence": [
+        {
+          "label": "Frontend documentation",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/apps/voice-tarot"
+        },
+        {
+          "label": "Feature specifications",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/specs"
+        },
+        {
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Week 08 activity record",
+          "url": "week-08.html"
+        }
+      ],
+      "sections": []
     },
     {
       "id": "development",
       "title": "Development & technical insights",
       "guidance": "State which development tasks used the API and Codex. Give each technical problem, its solution, and the checks of that solution.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "The team moved from scripted proofs of concept to a structured React and TypeScript application, then integrated voice, card selection and report handling. The design evolved through visual concept review and a complete deck of 78 card illustrations.",
+        "Codex supported software development. The team established feature specifications, a monorepo and a Git Flow with feature branches, pull requests, development integration and release checks. Human review was important in refining the voice persona and dialogue."
+      ],
+      "evidence": [
+        {
+          "label": "Week 04 activity record",
+          "url": "week-04.html"
+        },
+        {
+          "label": "Week 05 activity record",
+          "url": "week-05.html"
+        },
+        {
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Git Flow guide",
+          "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/git-flow.md"
+        },
+        {
+          "label": "Tarot card asset guide",
+          "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/tarot-card-assets.md"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Engineering lessons",
+          "paragraphs": [],
+          "items": [],
+          "tables": [
+            {
+              "label": "Technical learning",
+              "headers": [
+                "Challenge",
+                "Learning"
+              ],
+              "rows": [
+                [
+                  "Hybrid voice response",
+                  "Naturalness and timing must be tested together."
+                ],
+                [
+                  "Voice and visual synchronization",
+                  "Use a consistent application state for card reveal and interpretation."
+                ],
+                [
+                  "Cross-device testing",
+                  "Test the real journey on mobile browsers instead of relying only on local checks."
+                ],
+                [
+                  "Session lifecycle",
+                  "Handle endings, disconnects and reports as part of the complete experience."
+                ],
+                [
+                  "Design integration",
+                  "Compare the deployed interface with the design and product specification."
+                ]
+              ]
+            }
+          ],
+          "after": []
+        }
+      ]
     },
     {
       "id": "evaluation",
       "title": "Evaluation & improvement",
       "guidance": "Give the test method, scenarios, measures, results, failures, and improvements. Keep observations separate from conclusions.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "Members conducted exploratory service research and prototype tests. Qualitative observations concerned ease of entry, participation in card selection, response pacing, naturalness and closing.",
+        "Basic device checks were reported by November 27. These observations do not establish user satisfaction, reliability, or quantitative latency. Further controlled tests are required."
+      ],
+      "evidence": [
+        {
+          "label": "Week 06 activity record",
+          "url": "week-06.html"
+        },
+        {
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Week 08 activity record",
+          "url": "week-08.html"
+        },
+        {
+          "label": "Voice UX research notes",
+          "url": "research.html"
+        }
+      ],
+      "sections": []
     },
     {
       "id": "journey",
@@ -792,36 +1288,73 @@
       "guidance": "Give each week’s work and the changes to the problem, design, and implementation.",
       "status": "draft",
       "paragraphs": [
-        "The curriculum is a plan. Actual meeting records document the team decisions and progress.",
-        "In weeks 4 and 5, the team will make the prototype and agent. In weeks 6 and 7, it will do user tests and change the interface. In week 8, it will prepare the final presentation.",
-        "The first meetup explored possible services. The second selected MIND DETOXING. The third changed the concept to voice tarot and defined the initial web experience."
+        "The journey began with orientation and a group vote for MIND DETOXING. The team then chose voice tarot and explored several interaction and visual concepts.",
+        "Later weeks focused on the initial prototype, voice-provider evaluation, visual design, engineering foundation, user research, prompt refinement and integration testing. Week 8 remains in progress."
       ],
       "evidence": [
         {
-          "label": "Published Voice UX Lab study brief",
-          "url": "https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34"
-        },
-        {
-          "label": "First regular meetup record",
+          "label": "Week 01 activity record",
           "url": "week-01.html"
         },
         {
-          "label": "Second regular meetup record",
+          "label": "Week 02 activity record",
           "url": "week-02.html"
         },
         {
-          "label": "Third regular meetup record",
+          "label": "Week 03 activity record",
           "url": "week-03.html"
+        },
+        {
+          "label": "Week 04 activity record",
+          "url": "week-04.html"
+        },
+        {
+          "label": "Week 05 activity record",
+          "url": "week-05.html"
+        },
+        {
+          "label": "Week 06 activity record",
+          "url": "week-06.html"
+        },
+        {
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Week 08 activity record",
+          "url": "week-08.html"
         }
-      ]
+      ],
+      "sections": []
     },
     {
       "id": "contributions",
       "title": "Individual work & reflections",
       "guidance": "Add each member’s approved name, role, work links, and comments. Keep meeting attendance separate from program completion.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "The team collaborated across product planning, UX design, frontend, backend, voice and prompt development. Tasks, handoffs and review were coordinated through shared specifications, pull requests and design review.",
+        "The study encouraged members to explore work outside their original areas of expertise. Individual names and reflections will be included only with approval."
+      ],
+      "evidence": [
+        {
+          "label": "Week 04 activity record",
+          "url": "week-04.html"
+        },
+        {
+          "label": "Week 05 activity record",
+          "url": "week-05.html"
+        },
+        {
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Git Flow guide",
+          "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/git-flow.md"
+        }
+      ],
+      "sections": []
     },
     {
       "id": "limitations",
@@ -829,22 +1362,472 @@
       "guidance": "List the problems that remain and the limits of the tests. State which functions need more work.",
       "status": "draft",
       "paragraphs": [
-        "The product is not complete. Live voice quality tests remain necessary. The next milestone is a complete mobile conversation flow."
+        "The team has not completed formal evaluation of voice naturalness, latency, interruption handling, full device compatibility or end-to-end reliability. Exploratory research cannot be generalized to the broader market.",
+        "Payments, repeated card draws, expanded reader options and broader research remain follow-up work. The November 27 deadline is for submission, not proof of a finished release. The planned presentation is December 16."
       ],
       "evidence": [
         {
-          "label": "Third regular meetup record",
-          "url": "week-03.html"
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Week 08 activity record",
+          "url": "week-08.html"
+        },
+        {
+          "label": "Voice UX research notes",
+          "url": "research.html"
         }
-      ]
+      ],
+      "sections": []
     },
     {
       "id": "appendix",
       "title": "Artifacts & references",
       "guidance": "Add the code, documents, presentation, demo video, approved photos, evidence index, and source links.",
-      "status": "pending",
-      "paragraphs": [],
-      "evidence": []
+      "status": "draft",
+      "paragraphs": [
+        "Public evidence includes the product repository, feature specifications, Git Flow and card asset documentation. Private research transcripts, personal information, credentials, restricted designs and operational records are not part of this archive.",
+        "Additional approved design assets, photographs, demonstration recordings and presentation materials can be added after review."
+      ],
+      "evidence": [
+        {
+          "label": "Ten Minutes source repository",
+          "url": "https://github.com/voice-uxlab/ten-minutes"
+        },
+        {
+          "label": "Feature specifications",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/specs"
+        },
+        {
+          "label": "Git Flow guide",
+          "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/git-flow.md"
+        },
+        {
+          "label": "Frontend documentation",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/apps/voice-tarot"
+        },
+        {
+          "label": "Tarot card asset guide",
+          "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/tarot-card-assets.md"
+        },
+        {
+          "label": "Voice UX research notes",
+          "url": "research.html"
+        }
+      ],
+      "sections": []
     }
-  ]
+  ],
+  "case_study": {
+    "project": {
+      "kicker": "Current project",
+      "title": "Ten Minutes",
+      "description": "A real-time AI voice tarot consultation. Talk about a concern, choose cards, and explore what they mean with Lena.",
+      "status": "Working prototype / integration testing",
+      "sections": [
+        {
+          "title": "Product direction",
+          "paragraphs": [
+            "Ten Minutes explores a low-friction way to discuss everyday concerns by voice. The first product emphasizes relationship questions while allowing open-ended consultation.",
+            "The experience is entertainment and reflection, not professional advice or a prediction of certain outcomes."
+          ],
+          "items": [],
+          "tables": [],
+          "after": []
+        },
+        {
+          "title": "Meet Lena",
+          "paragraphs": [
+            "Lena is a confident, candid and playful tarot reader. She listens without forcing agreement, uses natural Korean speech, and encourages the user to make their own decisions.",
+            "The Queen mindset evolved from a bold character concept into a more nuanced balance of directness, warmth and independence."
+          ],
+          "items": [],
+          "tables": [],
+          "after": []
+        },
+        {
+          "title": "User journey",
+          "paragraphs": [
+            "The mobile experience combines voice conversation with direct visual card selection. The user explains a concern, selects three cards and hears each interpretation before continuing the conversation."
+          ],
+          "items": [],
+          "tables": [
+            {
+              "label": "Consultation flow",
+              "headers": [
+                "Step",
+                "Interaction"
+              ],
+              "rows": [
+                [
+                  "01 Start",
+                  "Enter the service and start a voice session."
+                ],
+                [
+                  "02 Clarify",
+                  "Discuss the concern and establish the question."
+                ],
+                [
+                  "03 Choose",
+                  "Select three cards directly on screen."
+                ],
+                [
+                  "04 Read",
+                  "Reveal and interpret each card in sequence."
+                ],
+                [
+                  "05 Continue",
+                  "Discuss follow-up questions and possible next steps."
+                ],
+                [
+                  "06 Report",
+                  "Close the time-bounded session and review the personal result."
+                ]
+              ]
+            }
+          ],
+          "after": []
+        },
+        {
+          "title": "Four three-card spreads",
+          "paragraphs": [],
+          "items": [],
+          "tables": [
+            {
+              "label": "Spread selection",
+              "headers": [
+                "Spread",
+                "Positions"
+              ],
+              "rows": [
+                [
+                  "Time progression",
+                  "Past / present / possible future"
+                ],
+                [
+                  "Situation and advice",
+                  "Situation / obstacle / advice"
+                ],
+                [
+                  "Relationship",
+                  "Me / other person / relationship"
+                ],
+                [
+                  "Choice comparison",
+                  "Option A / option B / advice"
+                ]
+              ]
+            }
+          ],
+          "after": []
+        },
+        {
+          "title": "Visual identity and deck",
+          "paragraphs": [],
+          "items": [
+            "The team explored Y2K, metallic and combined visual concepts and selected a metallic direction.",
+            "The design includes a character identity, a mobile call interface, individual card reveal and a personal report.",
+            "The deck contains 78 illustrations: 22 major and 56 minor arcana. The web assets are optimized and mapped to stable card identifiers."
+          ],
+          "tables": [],
+          "after": []
+        },
+        {
+          "title": "Release scope",
+          "paragraphs": [],
+          "items": [],
+          "tables": [
+            {
+              "label": "Product scope",
+              "headers": [
+                "Area",
+                "Status and boundary"
+              ],
+              "rows": [
+                [
+                  "Voice consultation",
+                  "Working prototype; naturalness and complete device acceptance require further review."
+                ],
+                [
+                  "Card selection and reading",
+                  "Three-card touchscreen selection and sequential reading are the initial flow."
+                ],
+                [
+                  "Authentication",
+                  "Kakao sign-in is the current documented support; other providers are not launch commitments."
+                ],
+                [
+                  "Report and sharing",
+                  "Personal reports and sharing are designed and integrated; further verification is needed."
+                ],
+                [
+                  "Payments and expansion",
+                  "Payment, additional readers and repeated draws are deferred."
+                ]
+              ]
+            }
+          ],
+          "after": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Ten Minutes prototype (availability may vary)",
+          "url": "https://ten-minutes-tarot.vercel.app/"
+        },
+        {
+          "label": "Ten Minutes source repository",
+          "url": "https://github.com/voice-uxlab/ten-minutes"
+        },
+        {
+          "label": "Feature specifications",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/specs"
+        },
+        {
+          "label": "Tarot card asset guide",
+          "url": "https://github.com/voice-uxlab/ten-minutes/blob/main/docs/tarot-card-assets.md"
+        }
+      ]
+    },
+    "research": {
+      "kicker": "Study findings",
+      "title": "Voice UX research",
+      "description": "What we learned while designing a voice-first experience: when to speak, when to listen, and when a screen is better.",
+      "sections": [
+        {
+          "title": "Research questions",
+          "paragraphs": [],
+          "items": [
+            "How can a voice agent respond naturally in Korean while maintaining a consistent character?",
+            "Which interactions are better performed by voice, and which need a visual interface?",
+            "How can the application keep model responses, card reveal and spoken playback aligned?"
+          ],
+          "tables": [],
+          "after": []
+        },
+        {
+          "title": "Voice architecture trade-offs",
+          "paragraphs": [
+            "The team investigated OpenAI, ElevenLabs and Typecast. The current design combines Realtime speech understanding and conversational reasoning with Typecast speech synthesis.",
+            "Direct model audio is a simpler route. A separate synthesis provider gives more control over the voice, but adds latency, cancellation and synchronization work."
+          ],
+          "items": [],
+          "tables": [
+            {
+              "label": "Voice UX decisions",
+              "headers": [
+                "Observation",
+                "Design response"
+              ],
+              "rows": [
+                [
+                  "Spoken card numbers were difficult to recognize reliably.",
+                  "Use direct touch for precise card selection."
+                ],
+                [
+                  "Long explanations felt less conversational.",
+                  "Prefer short utterances and wait for the user’s turn."
+                ],
+                [
+                  "Card revelation and speech could fall out of sync.",
+                  "Coordinate reading with application state and reveal events."
+                ],
+                [
+                  "A hybrid voice pipeline can add response delay.",
+                  "Evaluate timing, naturalness and interruption behavior together."
+                ]
+              ]
+            }
+          ],
+          "after": []
+        },
+        {
+          "title": "Persona and prompt engineering",
+          "paragraphs": [],
+          "items": [
+            "Separate the persona’s identity and values from operational instructions and reference knowledge.",
+            "Write example utterances for each consultation stage and spread.",
+            "Use manual editing and review to reduce repetitive, formal or overly elaborate AI phrasing.",
+            "Use versioned prompts and application-controlled tools to make changes reviewable.",
+            "Use a human-reviewed reference of 78 cards and connect the revealed card, question and position."
+          ],
+          "tables": [
+            {
+              "label": "Illustrative dialogue revisions",
+              "headers": [
+                "Less suitable",
+                "More conversational"
+              ],
+              "rows": [
+                [
+                  "Please proceed with the card selection.",
+                  "Choose three cards."
+                ],
+                [
+                  "Would you like me to explain this in more detail?",
+                  "This may be what is making it difficult."
+                ]
+              ]
+            }
+          ],
+          "after": []
+        },
+        {
+          "title": "Exploratory service research",
+          "paragraphs": [
+            "Members experienced telephone, in-person and digital tarot services in November. We report only aggregate interaction observations, not personal concerns or individual provider assessments."
+          ],
+          "items": [],
+          "tables": [
+            {
+              "label": "Research observations",
+              "headers": [
+                "Theme",
+                "Implication"
+              ],
+              "rows": [
+                [
+                  "Availability and entry",
+                  "Reduce the friction of arranging a consultation."
+                ],
+                [
+                  "Onboarding and context",
+                  "Ask for the relevant context, not unnecessary personal information."
+                ],
+                [
+                  "Card participation",
+                  "Let users take part in the card selection and see the result."
+                ],
+                [
+                  "Time constraints",
+                  "Give an intentional closing rather than an unexpected end."
+                ],
+                [
+                  "Voice comfort",
+                  "Offer a low-pressure conversational opening and clear controls."
+                ],
+                [
+                  "Persistent results",
+                  "Give users an optional report to revisit the experience."
+                ]
+              ]
+            }
+          ],
+          "after": []
+        },
+        {
+          "title": "Evaluation plan",
+          "paragraphs": [
+            "The team observed qualitative behavior in exploratory tests. The following measures are proposed for future controlled evaluation; no quantitative benchmark or representative market result is claimed."
+          ],
+          "items": [],
+          "tables": [
+            {
+              "label": "Proposed evaluation measures",
+              "headers": [
+                "Measure",
+                "What to check"
+              ],
+              "rows": [
+                [
+                  "Turn latency",
+                  "Time from the end of user speech to the start of audible response."
+                ],
+                [
+                  "Interruption success",
+                  "Whether the old response stops and the new user turn is handled."
+                ],
+                [
+                  "Task completion",
+                  "Whether users complete question clarification, card selection, reading and report."
+                ],
+                [
+                  "Persona consistency",
+                  "Whether speech retains Lena’s character across scenarios."
+                ],
+                [
+                  "Naturalness",
+                  "Qualitative rating of pacing, wording and conversational turn-taking."
+                ]
+              ]
+            }
+          ],
+          "after": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Week 05 activity record",
+          "url": "week-05.html"
+        },
+        {
+          "label": "Week 06 activity record",
+          "url": "week-06.html"
+        },
+        {
+          "label": "Week 07 activity record",
+          "url": "week-07.html"
+        },
+        {
+          "label": "Week 08 activity record",
+          "url": "week-08.html"
+        },
+        {
+          "label": "Frontend documentation",
+          "url": "https://github.com/voice-uxlab/ten-minutes/tree/main/apps/voice-tarot"
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "date": "2026-10-11",
+        "title": "Orientation and ideation",
+        "description": "Prepare a shared environment and identify meaningful voice-first use cases.",
+        "week": 1
+      },
+      {
+        "date": "2026-10-18",
+        "title": "MIND DETOXING selected",
+        "description": "Select the first concept by proposal and team vote.",
+        "week": 2
+      },
+      {
+        "date": "2026-10-25",
+        "title": "Pivot to voice tarot",
+        "description": "Define a mobile voice experience with interactive cards.",
+        "week": 3
+      },
+      {
+        "date": "2026-11-07",
+        "title": "Early interaction prototype",
+        "description": "Compare visual concepts and test the scripted flow.",
+        "week": 4
+      },
+      {
+        "date": "2026-11-13",
+        "title": "Design and development foundation",
+        "description": "Select a visual direction and establish a structured application and Git Flow.",
+        "week": 5
+      },
+      {
+        "date": "2026-11-21",
+        "title": "Design and service research",
+        "description": "Prepare the card assets, improve the UI and try existing services.",
+        "week": 6
+      },
+      {
+        "date": "2026-11-25",
+        "title": "Prompt and product integration",
+        "description": "Refine natural Korean dialogue and integrate the frontend, backend and speech.",
+        "week": 7
+      },
+      {
+        "date": "2026-11-27",
+        "title": "Submission build in review",
+        "description": "Run device checks and prepare the review build.",
+        "week": 8
+      }
+    ]
+  }
 }

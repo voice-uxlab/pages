@@ -56,3 +56,7 @@ Use the [English copy guide](english-copy.md) for public English text. Keep the 
 ## Editorial responsibility
 
 Read each English passage against the source and ASD-STE100 specification. Review meaning, syntax, terminology, and the reader’s task. Do not use static language checkers or word counts to claim STE compliance. Website link and structure checks are separate from this editorial review.
+
+## Project, research and development timeline
+
+The archive has a `case_study` object with `project`, `research` and `timeline`. Each topic contains a translated title, introduction, reviewed sections, tables, and approved public links. The timeline points to the relevant weekly page. Use supplementary records for asynchronous milestones, with the actual activity date and no invented attendance or times. Preserve each historical meeting decision in its original context. Distinguish exploratory observations, current implementation, plans, and independently verified outcomes. Add new English text to the Korean translation map.

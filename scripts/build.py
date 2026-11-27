@@ -29,6 +29,11 @@ def validate():
                 assert asset.get('label') and asset.get('url')
                 assert asset['url'].startswith(('https://', 'assets/')), 'Use HTTPS or local assets'
                 assert asset.get('publication_approved') is True
+    case = DATA['case_study']
+    assert all(case[name]['sections'] and case[name]['links'] for name in ['project', 'research'])
+    assert [event['week'] for event in case['timeline']] == list(range(1, 9))
+    for event in case['timeline']:
+        date.fromisoformat(event['date'])
     for section in DATA['report']:
         assert section['status'] in ['pending', 'draft', 'verified']
         if section['status'] == 'verified':
@@ -38,7 +43,7 @@ def links(items):
     return ''.join(f'<li><a href="{e(i["url"])}">{e(i["label"])}</a></li>' for i in items)
 
 def page(filename, title, active, content):
-    nav = [('index.html', 'Archive'), ('weeks.html', 'Weekly work'), ('project.html', 'Project'), ('report.html', 'Final report'), ('about.html', 'About')]
+    nav = [('index.html', 'Archive'), ('weeks.html', 'Weekly work'), ('project.html', 'Project'), ('research.html', 'Research'), ('report.html', 'Final report'), ('about.html', 'About')]
     navigation = ''.join(f'<a href="{href}" {"aria-current=\"page\"" if label == active else ""}>{label}</a>' for href, label in nav)
     (OUT / filename).write_text(f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{e(title)} · Voice UX Lab</title><meta name="description" content="The Voice UX Lab work archive and final project report: eight weeks of voice-first AI research, development, and learning."><link data-language="en" rel="alternate" hreflang="en" href="{filename}"><link data-language="ko" rel="alternate" hreflang="ko" href="{filename.replace('.html', '.ko.html')}"><link rel="stylesheet" href="styles.css"><link rel="icon" href="favicon.svg" type="image/svg+xml"></head>
@@ -79,6 +84,26 @@ def report_section(s, level=3):
     after = ''.join(report_section(part, min(level+1, 6)) for part in s.get('after', []))
     return '<section class="record-section"><h'+str(level)+'>'+e(s['title'])+'</h'+str(level)+'>'+paragraphs+items+tables+after+'</section>'
 
+def topic_sections(sections):
+    return ''.join(report_section(s, level=2) for s in sections)
+
+def timeline():
+    return '<ol class="timeline">' + ''.join(
+        f'<li><time datetime="{e(event["date"])}">{e(event["date"])}</time>'
+        f'<div><h3><a href="week-{event["week"]:02}.html">{e(event["title"])}</a></h3>'
+        f'<p>{e(event["description"])}</p></div></li>'
+        for event in DATA['case_study']['timeline']) + '</ol>'
+
+def architecture_overview():
+    # High-level responsibilities only. Avoid operational or credential detail.
+    return '''<section class="architecture-panel"><h3>Architecture overview</h3>
+    <div class="architecture-grid">
+      <div><strong>Mobile web</strong><span>React / TypeScript</span></div>
+      <div><strong>Speech and reasoning</strong><span>OpenAI Realtime / WebRTC</span></div>
+      <div><strong>Speech synthesis</strong><span>Typecast</span></div>
+      <div><strong>Application state and reports</strong><span>FastAPI / PostgreSQL</span></div>
+    </div></section>'''
+
 def build(localize=True):
     validate()
     if OUT.exists(): shutil.rmtree(OUT)
@@ -90,7 +115,18 @@ def build(localize=True):
     completed = sum(w['status'] == 'completed' for w in DATA['weeks'])
     records = [(w,r) for w in DATA['weeks'] for r in w['records']]
     latest = ''.join(f'<a class="entry" href="week-{w["number"]:02}.html"><span>{e(r["date"] or "Date not available")}</span><h3>{e(r["title"])}</h3><span>Week {w["number"]:02}</span></a>' for w,r in sorted(records,key=lambda x:x[1]['date'] or '',reverse=True)[:5]) or '<div class="empty"><h3>No activity records</h3><p>No activity records are available. The pages below contain the plan for each week.</p></div>'
-    page('index.html','Work archive','Archive',intro('Voice UX study','Voice UX Lab','We will make a voice interface during this eight-week program. This website contains our plans, work records, and final report.')+f'''<div class="facts"><div><span>Program window</span><strong>Oct 3 – Nov 30, 2026</strong></div><div><span>Weekly sessions</span><strong>8 weeks · {len(records)} activity records</strong></div><div><span>Project concept</span><strong>Voice tarot / In planning</strong></div></div><section><div class="section-title"><h2>New work records</h2><a href="weeks.html">All weeks</a></div>{latest}</section><section><div class="section-title"><h2>Eight-week plan</h2><span>Week plans</span></div><div class="week-grid">{week_cards()}</div></section><a class="report-banner" href="report.html"><span class="eyebrow">Final report</span><h2>Final project report</h2><p>The report will contain the demo, design decisions, test results, and each team member’s comments.</p><span class="pill">Read the draft report</span></a>''')
+    page('index.html','Work archive','Archive',
+         intro('Voice UX study','Voice UX Lab','We built a voice-first prototype during this eight-week program. This archive documents the work and our learning.')
+         + f'''<div class="facts"><div><span>Program window</span><strong>Oct 3 – Nov 30, 2026</strong></div>
+         <div><span>Weekly sessions</span><strong>8 weeks · {len(records)} activity records</strong></div><div><span>Project concept</span><strong>Ten Minutes / Working prototype</strong></div></div>
+         <div class="feature-grid">
+           <a class="feature-tile project-tile" href="project.html"><span class="eyebrow">Current project</span><h2>Ten Minutes</h2><p>{e(DATA["case_study"]["project"]["description"])}</p><span class="pill">Explore the project</span></a>
+           <a class="feature-tile research-tile" href="research.html"><span class="eyebrow">Study findings</span><h2>Voice UX research</h2><p>{e(DATA["case_study"]["research"]["description"])}</p><span class="pill">Read the research</span></a>
+         </div>
+         <section><div class="section-title"><h2>Development milestones</h2><span>As of November 27, 2026</span></div>{timeline()}</section>
+         <section><div class="section-title"><h2>New work records</h2><a href="weeks.html">All weeks</a></div>{latest}</section>
+         <section><div class="section-title"><h2>Eight-week plan</h2><span>Week plans</span></div><div class="week-grid">{week_cards()}</div></section>
+         <a class="report-banner" href="report.html"><span class="eyebrow">Final report</span><h2>Final project report</h2><p>The report documents work through November 27. Results and limitations are separated from plans.</p><span class="pill">Read the current draft report</span></a>''')
     page('weeks.html','Weekly work','Weekly work',intro('Work archive','Weekly work','Meetings are in person near Yangjae Citizen’s Forest Station. Weeks 1 and 2 ran from 14:00 to 18:00 KST. Weeks 3–8 run from 14:00 to 17:00 KST.')+orientation_card()+f'<div class="week-grid">{week_cards()}</div><aside class="note"><h2>Activity record contents</h2><p>Each record contains the date, time, approved attendee names, location, activity details, photos, and work products. It also contains decisions, reasons, tasks, and plans for the next meeting. The team must also submit the official Notion activity log.</p></aside>')
     for w in DATA['weeks']:
         items = ''.join(f'<li>{e(item)}</li>' for item in w['activities'])
@@ -104,17 +140,30 @@ def build(localize=True):
         body += '<a href="weeks.html">All weeks</a>'
         if w['number'] < 8: body += f'<a href="week-{w["number"]+1:02}.html">Next week</a>'
         page(f'week-{w["number"]:02}.html',f'Week {w["number"]}: {w["title"]}','Weekly work',body+'</div>')
-    page('project.html','Voice tarot project','Project',intro('Current project','Voice tarot','Ten Minute is the leading name for the voice tarot service. The team is still considering whether to include tarot in the name and whether to use Korean.')+'<section class="split"><h2>Product direction</h2><div><p>Focus on relationship questions while keeping open-ended voice consultations. Offer suggested topics as an optional starting point. The model classifies the concern from the conversation.</p><p>The reader has a cool, direct style inspired by Lee Hyori. Give brief, situation-specific feedback instead of long card explanations. Test whether prompt instructions can make the conversation feel faster.</p></div></section><section class="split"><h2>Report and spreads</h2><div><p>Provide the model with four three-card spreads and ask it to choose the best fit: past, present, future; situation, obstacle, advice; me, the other person, relationship; or option A, option B, advice.</p><p>Reveal cards one at a time. The personal report includes card images, consultation date and time, a short message from the reader, and a one-line situation summary.</p></div></section><section class="split"><h2>Sharing</h2><div><p>Share a URL with a compelling, light topic and a thumbnail, such as a question about finding a partner by Christmas. The destination includes a Try it myself button.</p><p>The full personal report remains private. Share content centers on the hook rather than sensitive consultation details. Masking is excluded because of implementation complexity. Preselected topics are the preferred viral format.</p></div></section><section class="split"><h2>Development and next work</h2><div><p>Align card draws with spoken interpretation. Consider a separate backend agent or model for card tasks. Check voice pacing and API capabilities during implementation.</p><p>Create a cover image with the name, design and implement the report, and generate 78 card images. Deploy frontend and backend projects on Vercel, separating database and authentication from the Realtime API relay. Purchase and connect a domain.</p><p>Each member will improve and test prompts based on SOUL.md, write example conversations by relationship scenario, and try comparable phone consultation services and share feedback. Record the experience if possible.</p></div></section>')
-    report_body = intro('Final report / Draft','Project report'.replace('<br>',' '),'The team will use the weekly records to complete this report. Each claim about a result must have evidence.')
+    project = DATA['case_study']['project']
+    research = DATA['case_study']['research']
+    project_body = intro(project['kicker'],project['title'],project['description'])
+    project_body += f'<p class="status-note">{e(project["status"])}</p>'
+    project_body += topic_sections(project['sections'])
+    project_body += '<section class="resource-list"><h2>Project resources</h2><ul>'+links(project['links'])+'</ul></section>'
+    project_body += '<aside class="note"><p>The early concept and historic meeting decisions remain in the weekly archive.</p><a class="pill" href="weeks.html">All weeks</a></aside>'
+    page('project.html','Ten Minutes','Project',project_body)
+    research_body = intro(research['kicker'],research['title'],research['description'])
+    research_body += topic_sections(research['sections'])
+    research_body += '<section class="resource-list"><h2>Related records</h2><ul>'+links(research['links'])+'</ul></section>'
+    page('research.html','Voice UX research','Research',research_body)
+    report_body = intro('Final report / Draft','Project report'.replace('<br>',' '),'Study records and technical artifacts inform this draft. Claims about outcomes must have evidence.')
     report_body += '<div class="report-layout"><nav class="toc" aria-label="Report sections">'+''.join(f'<a href="#{s["id"]}">{i:02} {e(s["title"])}</a>' for i,s in enumerate(DATA['report'],1))+'</nav><div>'
     for i,s in enumerate(DATA['report'],1):
-        report_body += f'<section class="report-section" id="{s["id"]}"><p class="eyebrow">{i:02} / {e(s["status"])}</p><h2>{e(s["title"])}</h2><p>{e(s["guidance"])}</p>'
+        report_body += f'<section class="report-section" id="{s["id"]}"><p class="eyebrow">{i:02} / {e(s["status"])}</p><h2>{e(s["title"])}</h2>'
         report_body += ''.join(f'<p>{e(p)}</p>' for p in s['paragraphs']) or '<p class="pending">The team must add content and evidence.</p>'
+        if s['id'] == 'architecture': report_body += architecture_overview()
+        report_body += ''.join(report_section(part, level=3) for part in s.get('sections', []))
         if s['evidence']: report_body += f'<h3>Supporting evidence</h3><ul>{links(s["evidence"])}</ul>'
         report_body += '</section>'
     page('report.html','Final project report','Final report',report_body+'</div></div>')
-    about_extra = '''<section class="split"><h2>Voice as an interface</h2><div><p>The team will examine voice as an alternative to a screen and keyboard. The study includes real-time speech and tool calls.</p><p>The agent must identify the task and keep information from the conversation. At the third meetup, the team selected voice tarot.</p><h3>Tools & preparation</h3><p>The team uses Codex for development. It will compare voice providers before the final API decision. Members need a laptop, microphone, speakers, and internet access.</p></div></section><section class="split"><h2>Shared learning</h2><div><p>IT’s Study is an AI study network. Team members examine technical questions and do exercises together.</p><p>Activity records will contain new knowledge, tools, questions, and discussion results. They will also contain preparation tasks for the next meeting.</p></div></section><section class="split"><h2>Project output plan</h2><div><ul><li>GitHub Pages project introduction and work archive</li><li>GitHub organization and repository</li><li>Developer documentation</li><li>Presentation slides</li><li>Demo videos</li></ul><p>The archive and repository are available. The team will add links to documents, slides, and demo videos when they are available.</p></div></section><section class="split"><h2>Activity-log guide</h2><div><p>The Notion guide specifies an offline team orientation and an offline last meeting. Each meeting must last at least 90 minutes. Each log must contain the date, time, attendees, location, activity details, and evidence.</p><p>Send the last activity log by December 7, 2026. After the first and last meeting reports, the leader must send an email to the organizer. This website does not replace the official Notion record.</p></div></section><section class="split"><h2>Source pages</h2><div><ul><li><a href="https://swits.notion.site/5-IT-s-Study-810d39944fb982f694e98115c6df0a25">IT’s Study cohort 5 activity hub</a></li><li><a href="https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34">Voice UX Lab study brief</a></li><li><a href="https://swits.notion.site/3ebd39944fb98024b2c5fd33f27e8f96">Voice UX Lab activity-log guide</a></li></ul><p>The initial archive used public source pages from October 5, 2026. Later meeting records use supplied transcripts and confirmed activity details.</p></div></section>'''
-    page('about.html','About the lab','About',intro('Voice UX Lab / Seoul','About Voice UX Lab'.replace('<br>',' '),'We will examine voice interfaces and make an AI agent. This archive will contain our work records.')+'''<section class="split"><h2>The program</h2><div><p>Voice UX Lab is part of OpenAI × IT’s Study, cohort 5. Team members must give approval for their public profiles.</p><p>The program runs from October 3 to November 30, 2026. Meetings are in person near Yangjae Citizen’s Forest Station. Weeks 1 and 2 ran from 14:00 to 18:00 KST. Weeks 3–8 run from 14:00 to 17:00 KST.</p><p>This website contains the team’s work. It is not an official OpenAI website.</p></div></section><section class="split"><h2>Work archive</h2><div><p>Weekly records contain our work and the reasons for our decisions. The final report will contain the design, demo, results, and team members’ comments.</p><p>The team will publish only approved content. Private team storage contains restricted materials, raw recordings, contact details, attendance data, and consent records.</p></div></section>''' + about_extra)
+    about_extra = '''<section class="split"><h2>Voice as an interface</h2><div><p>The team explored real-time speech, application-controlled actions and the balance between voice and screen interaction.</p><p>The agent must identify the task and keep information from the conversation. At the third meetup, the team selected voice tarot.</p><h3>Tools & preparation</h3><p>The project uses OpenAI Realtime, Typecast, React, FastAPI and PostgreSQL. Codex supported collaborative development.</p></div></section><section class="split"><h2>Shared learning</h2><div><p>IT’s Study is an AI study network. Team members examine technical questions and do exercises together.</p><p>Team members explored different workstreams and learned from collaborative design and software development.</p></div></section><section class="split"><h2>Project output plan</h2><div><ul><li>GitHub Pages project introduction and work archive</li><li>GitHub organization and repository</li><li>Developer documentation</li><li>Presentation slides</li><li>Demo videos</li></ul><p>The archive, public repository and technical documentation are available. Approved media and presentation materials will be added when available.</p></div></section><section class="split"><h2>Activity-log guide</h2><div><p>The Notion guide specifies an offline team orientation and an offline last meeting. Each meeting must last at least 90 minutes. Each log must contain the date, time, attendees, location, activity details, and evidence.</p><p>Send the last activity log by December 7, 2026. After the first and last meeting reports, the leader must send an email to the organizer. This website does not replace the official Notion record.</p></div></section><section class="split"><h2>Source pages</h2><div><ul><li><a href="https://swits.notion.site/5-IT-s-Study-810d39944fb982f694e98115c6df0a25">IT’s Study cohort 5 activity hub</a></li><li><a href="https://swits.notion.site/UX-Voice-UX-Lab-Voice-First-AI-Agent-3bbd39944fb9809992f0dab0fa461c34">Voice UX Lab study brief</a></li><li><a href="https://swits.notion.site/3ebd39944fb98024b2c5fd33f27e8f96">Voice UX Lab activity-log guide</a></li></ul><p>The initial archive used public source pages from October 5, 2026. Later meeting records use supplied transcripts and confirmed activity details.</p></div></section>'''
+    page('about.html','About the lab','About',intro('Voice UX Lab / Seoul','About Voice UX Lab'.replace('<br>',' '),'We built a voice-first prototype during this eight-week program. This archive documents the work and our learning.')+'''<section class="split"><h2>The program</h2><div><p>Voice UX Lab is part of OpenAI × IT’s Study, cohort 5. Team members must give approval for their public profiles.</p><p>The program runs from October 3 to November 30, 2026. Meetings are in person near Yangjae Citizen’s Forest Station. Weeks 1 and 2 ran from 14:00 to 18:00 KST. Weeks 3–8 run from 14:00 to 17:00 KST.</p><p>This website contains the team’s work. It is not an official OpenAI website.</p><p>The final regular meeting is planned for November 29; the official activity period ends November 30. The cohort presentation is scheduled for December 16.</p></div></section><section class="split"><h2>Work archive</h2><div><p>Public records include reviewed meeting summaries and asynchronous project milestones.</p><p>The team will publish only approved content. Private team storage contains restricted materials, raw recordings, contact details, attendance data, and consent records.</p></div></section>''' + about_extra)
     if localize:
         from i18n import korean_page
         for source in list(OUT.glob('*.html')):

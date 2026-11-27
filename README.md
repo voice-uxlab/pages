@@ -42,9 +42,10 @@ This public site complements official reporting; it does not replace it. Keep of
 
 ## Navigation
 
-- Archive: latest published activity and the eight-week journey.
+- Archive: latest published activity, project status, and the development timeline.
 - Weekly work: the bilingual October 11, 2026 orientation deck, then all planned sessions and reviewed activity records.
-- Project: the Sona proposal, with implementation status stated explicitly.
+- Project: the current Ten Minutes prototype, its product and experience scope, and public resources.
+- Research: voice UX decisions, persona and prompt refinement, exploratory service research, and proposed evaluation measures.
 - Final report: summary, problem, demo, architecture, development, evaluation, learning, contributions, limitations, and artifacts.
 - About: context, team, and archive purpose.
 
